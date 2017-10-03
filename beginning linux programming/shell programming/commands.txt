@@ -1,0 +1,72 @@
+ls
+
+ls -al:
+	size, type, last modified, ....
+
+ls -al | more: 
+	 file listing to a screen-at-a-time display. 
+
+
+lpr
+	off line print - sends a print job to the default system queue.
+
+man bash
+
+
+/bin/bash --version
+	bash version 
+
+ps
+	The ps (i.e., process status) command is used to provide information about the currently running processes, including their process identification numbers (PIDs).
+
+Pipes and redirection:
+	 ls -l > lsoutput.txt
+
+	 ps >> lsoutput.txt
+			
+		will append the output of the ps command to the end of the specified file.
+
+
+	Suppose you want to use the kill command to kill a process from a script. There is always a slight risk that the process will die before the kill command is executed. If this happens, kill will write an error message to the standard error output, which, by default, will appear on the screen. By redirecting both the standard output and the error, you can prevent the kill command from writing any text to the screen.
+	The command
+		
+		$ kill -HUP 1234 >killout.txt 2>killerr.txt
+
+	will put the output and error information into separate files.
+
+
+
+	more < killout.txt
+
+		print file content on the terminal
+
+
+
+	 pipe operator ( | )
+
+
+
+	 ps | sort > pssort.out
+
+
+	 ps | sort | more
+
+
+	 cat 
+	 	concatinate
+
+
+	 cat mydata.txt | sort | uniq > mydata2.txt
+
+
+	 ls k*.txt
+
+
+	 ls c*
+
+	 ls c?t.txt
+
+	 more on grep: https://www.computerhope.com/unix/ugrep.htm
+	 more on cat: http://www.linfo.org/cat.html
+
+	 more `grep -l POSIX *` == grep -l POSIX * | more

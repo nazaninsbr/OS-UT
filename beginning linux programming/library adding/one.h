@@ -1,0 +1,3 @@
+void sayHi(){
+	printf("Hi");
+}

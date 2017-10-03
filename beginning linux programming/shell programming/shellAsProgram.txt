@@ -1,0 +1,19 @@
+//for files in the current directory
+
+for file in *
+do 
+echo hi
+done
+
+
+
+
+$ for file in *
+> do
+> if grep -l POSIX $file
+> then
+> more $file
+> fi
+> done
+posix
+This is a file with POSIX in it - treat it well $

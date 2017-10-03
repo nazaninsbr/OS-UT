@@ -1,0 +1,10 @@
+The operating system is the software package that communicates directly to the hardware and our application. The kernel is the lowest level of the operating system. The kernel is the main part of the operating system and is responsible for translating the command into something that can be understood by the computer.
+
+
+The kernel is part of the operating system and closer to the hardware it provides low level services like:
+
+device driver
+process management
+memory management
+system calls
+An operating system also includes applications like the user interface (shell,gui,tools and services).

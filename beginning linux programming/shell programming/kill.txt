@@ -1,0 +1,6 @@
+Alternatively, you can quit an application using shell command via Terminal.
+
+Launch Spotlight Search with Command + Spacebar and search for Terminal. Hit Enter.
+In Terminal, type ps -ax then Enter. This will give you a list of all running process on your Mac along with other details like its respective PID number, elapsed running time, process name and process location.
+To kill (force quit) a specific application, look for its name and note down the PID number.
+Type the following command in Terminal: kill <PID number>
