@@ -1,0 +1,55 @@
+1) User view
+
+	PC:
+
+		The goal is to maximize the work (or play) that the user is performing. In this case, the operating system is designed mostly for ease of use, with some attention paid to performance and none paid to resource utilization—how various hardware and software resources are shared. Performance is, of course, important to the user; but such systems are optimized for the single-user experience rather than the requirements of multiple users.
+
+	Mainframe or minicomputer:
+
+		user sits at a terminal, Other users are accessing the same computer through other terminals
+
+		These users share resources and may exchange information. The operating system in such cases is designed to maximize resource utilization — to assure that all available CPU time, memory, and I/O are used efficiently and that no individual user takes more than her fair share.
+
+
+	Workstation:
+
+		users sit at workstations connected to networks of other workstations and servers.
+
+		These users have dedicated resources at their disposal, but they also share resources such as networking and servers, including file, compute, and print servers. Therefore, their operating system is designed to compromise between individual usability and resource utilization.
+
+
+	Mobile computers:
+
+		Quite often, they are connected to networks through cellular or other wireless technologies. Increasingly, these mobile devices are replacing desktop and laptop computers for people who are primarily interested in using computers for e-mail and web browsing. The user interface for mobile computers generally features a touch screen, where the user interacts with the system by pressing and swiping fingers across the screen rather than using a physical keyboard and mouse.
+
+	No or little user view:
+
+		For example, embedded computers
+
+
+		 they and their operating systems are designed primarily to run without user intervention.
+
+
+2) System view
+	
+	From the computer’s point of view, the operating system is the program most intimately involved with the hardware.
+
+
+	so it is expected to do 2 things:
+
+	- resource allocation 
+
+		The operating system acts as the manager of these resources. Facing numerous and possibly conflicting requests for resources, the operating system must decide how to allocate them to specific programs and users so that it can operate the computer system efficiently and fairly.
+
+		resource allocation is especially important where many users access the same mainframe or minicomputer.
+
+	- control program
+
+		A control program manages the execution of user programs to prevent errors and improper use of the computer. It is especially concerned with the operation and control of I/O devices.
+
+
+
+
+
+
+

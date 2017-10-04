@@ -1,0 +1,26 @@
+operating system:
+
+	is considered the parts of the system responsible for basic use and administration.
+	This includes the kernel and device drivers, boot loader, command shell or other user interface, and basic file and system utilities. It is the stuff you need—not a web browser or music players.
+
+
+System:
+		 
+		in turn, refers to the operating system and all the applications running on top of it.
+
+
+Kernel:
+
+ 	It is the core internals; the software that provides basic services for all other parts of the system, manages hard- ware, and distributes system resources.The kernel is sometimes referred to as the supervisor, core, or internals of the operating system.
+
+
+Kernel space:
+
+	modern systems with protected memory management units, the kernel typically resides in an elevated system state compared to normal user applications.This includes a protected memory space and full access to the hardware.This system state and memory space is col- lectively referred to as kernel-space. 
+
+
+
+User space:
+	
+	user applications execute in user-space.They see a subset of the machine’s available resources and can perform certain system functions, directly access hardware, access memory outside of that allotted them by the kernel, or otherwise misbehave.
+

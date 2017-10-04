@@ -1,0 +1,15 @@
+what is OS?
+
+	An operating system acts as an intermediary between the user of a computer and the computer hardware.
+
+	An operating system is software that manages the computer hardware. The hardware must provide appropriate mechanisms to ensure the correct operation of the computer system and to prevent user programs from interfering with the proper operation of the system.
+
+
+	An operating system is a program that manages a computer’s hardware. It also provides a basis for application programs and acts as an intermediary between the computer user and the computer hardware.
+
+what is it's purpose?
+
+	The purpose of an operating system is to provide an environment in which a user can execute programs in a convenient and efficient manner.
+
+
+** this is an introductory chapter **

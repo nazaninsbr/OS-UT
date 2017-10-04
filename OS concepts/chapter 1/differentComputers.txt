@@ -1,0 +1,31 @@
+Abstract view of the components of a computer system:
+
+	A computer system can be devided into 4 parts:
+
+		- hardware
+
+			parts such as the cpu, memory and teh I/O
+
+			they provide basic computing resources of the system 
+
+		- operating system
+
+			controls the hardware
+
+			coordinates its use among various application programs and users 
+
+		- application programs
+
+			such as word, excel and ...
+
+			define the way these resources are going to be used to solve users computing problems
+
+
+		- users
+
+
+	Another view at computer systems would be:
+
+		+ hardware
+		+ software
+		+ data
