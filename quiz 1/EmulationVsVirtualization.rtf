@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red0\green0\blue0;\red19\green156\blue235;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c0\c0;\cssrgb\c0\c67843\c93725;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+Virtualization is a technology that allows operating systems to run as applications within other operating systems. At first blush, there seems to be little reason for such functionality. But the virtualization industry is vast and growing, which is a testament to its utility and importance. 
+\f1\fs24 \cf3 \
+
+\f0\fs26\fsmilli13333 \cf2 Broadly speaking, virtualization is one member of a class of software that also includes emulation. 
+\b \cf4 Emulation 
+\b0 \cf2 is used when the source 
+\fs24 CPU 
+\fs26\fsmilli13333 type is different from the target 
+\fs24 CPU 
+\fs26\fsmilli13333 type. For example, when Apple switched from the 
+\fs24 IBM 
+\fs26\fsmilli13333 Power 
+\fs24 CPU 
+\fs26\fsmilli13333 to the Intel x86 
+\fs24 CPU 
+\fs26\fsmilli13333 for its desktop and laptop computers, it included an emulation facility called 
+\f1 \cf2 \'93
+\f0 \cf2 Rosetta,
+\f1 \cf2 \'94 
+\f0 \cf2 which allowed applications compiled for the 
+\fs24 IBM CPU 
+\fs26\fsmilli13333 to run on the Intel 
+\fs24 CPU
+\fs26\fsmilli13333 . That same concept can be extended to allow an entire operating system written for one platform to run on another. Emulation comes at a heavy price, however. Every machine-level instruction that runs natively on the source system must be translated to the equivalent function on the target system, frequently resulting in several target instructions. If the source and target 
+\fs24 CPU
+\fs26\fsmilli13333 s have similar performance levels, the emulated code can run much slower than the native code. 
+\f1\fs24 \cf3 \
+
+\f0\fs26\fsmilli13333 \cf2 A common example of emulation occurs when a computer language is not compiled to native code but instead is either executed in its high-level form or translated to an intermediate form. This is known as 
+\b \cf4 interpretation
+\b0 \cf2 . Some languages, such as 
+\fs24 BASIC
+\fs26\fsmilli13333 , can be either compiled or interpreted. Java, in contrast, is always interpreted. Interpretation is a form of emulation in that the high-level language code is translated to native 
+\fs24 CPU 
+\fs26\fsmilli13333 instructions, emulating not another 
+\fs24 CPU 
+\fs26\fsmilli13333 but a theoretical virtual machine on which that language could run natively. Thus, we can run Java programs on 
+\f1 \cf2 \'93
+\f0 \cf2 Java virtual machines,
+\f1 \cf2 \'94 
+\f0 \cf2 but technically those virtual machines are Java emulators. 
+\f1\fs24 \cf3 \
+
+\f0\fs26\fsmilli13333 \cf2 With 
+\b \cf4 virtualization
+\b0 \cf2 , in contrast, an operating system that is natively com- piled for a particular 
+\fs24 CPU 
+\fs26\fsmilli13333 architecture runs within another operating system also native to that 
+\fs24 CPU
+\fs26\fsmilli13333 . Virtualization first came about on 
+\fs24 IBM 
+\fs26\fsmilli13333 mainframes as a method for multiple users to run tasks concurrently. Running multiple virtual machines allowed (and still allows) many users to run tasks on a system designed for a single user. Later, in response to problems with running multiple Microsoft Windows 
+\fs24 XP 
+\fs26\fsmilli13333 applications on the Intel x86 
+\fs24 CPU
+\fs26\fsmilli13333 , 
+\fs24 VM
+\fs26\fsmilli13333 ware created a new virtualization technology in the form of an application that ran on 
+\fs24 XP
+\fs26\fsmilli13333 . That application ran one or more 
+\b \cf4 guest 
+\b0 \cf2 copies of Windows or other native x86 operating systems, each running its own applications. (See Figure 1.20.) Windows was the 
+\b \cf4 host 
+\b0 \cf2 operating system, and the 
+\fs24 VM
+\fs26\fsmilli13333 ware application was the virtual machine manager 
+\fs24 VMM
+\fs26\fsmilli13333 . The 
+\fs24 VMM 
+\fs26\fsmilli13333 runs the guest operating systems, manages their resource use, and protects each guest from the others. 
+\f1\fs24 \cf3 \
+
+\f0\fs26\fsmilli13333 \cf2 Even though modern operating systems are fully capable of running multiple applications reliably, the use of virtualization continues to grow. On laptops and desktops, a 
+\fs24 VMM 
+\fs26\fsmilli13333 allows the user to install multiple operating systems for exploration or to run applications written for operating systems other than the native host. For example, an Apple laptop running Mac 
+\fs24 OS X 
+\fs26\fsmilli13333 on the x86 
+\fs24 CPU 
+\fs26\fsmilli13333 can run a Windows guest to allow execution of Windows applications. Companies writing software for multiple operating systems can use virtualization to run all of those operating systems on a single physical server for development, testing, and debugging. Within data centers, virtualization has become a common method of executing and managing computing environments. 
+\fs24 VMM
+\fs26\fsmilli13333 s like 
+\fs24 VM
+\fs26\fsmilli13333 ware, 
+\fs24 ESX
+\fs26\fsmilli13333 , and Citrix XenServer no longer run on host operating systems but rather 
+\i\b are 
+\i0\b0 the hosts. Full details of the features and implementation of virtualization are found in Chapter 16. 
+\f1\fs24 \cf3 \
+\
+}

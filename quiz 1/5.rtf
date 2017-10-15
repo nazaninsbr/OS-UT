@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+\red255\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+\csgenericrgb\c100000\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+The multiple-processor systems in use today are of two types. Some systems use 
+\b \cf3 asymmetric multiprocessing
+\b0 \cf2 , in which each processor is assigned a specific task. A 
+\i\b boss 
+\i0\b0 processor controls the system; the other processors either look to the boss for instruction or have predefined tasks. This scheme defines a boss\'96worker relationship. The boss processor schedules and allocates work to the worker processors. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The most common systems use 
+\b \cf3 symmetric multiprocessing \cf2 (
+\fs24 \cf3 SMP
+\fs26\fsmilli13333 \cf2 )
+\b0 , in which each processor performs all tasks within the operating system. 
+\fs24 SMP 
+\fs26\fsmilli13333 means that all processors are peers; no boss\'96worker relationship exists between processors. Figure 1.6 illustrates a typical 
+\fs24 SMP 
+\fs26\fsmilli13333 architecture. Notice that each processor has its own set of registers, as well as a private\'97or local \'97cache. However, all processors share physical memory. An example of an 
+\fs24 SMP 
+\fs26\fsmilli13333 system is 
+\fs24 AIX
+\fs26\fsmilli13333 , a commercial version of 
+\fs24 UNIX 
+\fs26\fsmilli13333 designed by 
+\fs24 IBM
+\fs26\fsmilli13333 . An 
+\fs24 AIX 
+\fs26\fsmilli13333 system can be configured to employ dozens of processors. \cf5 The benefit of this model is\cf2  that many processes can run simultaneously\'97
+\i\fs24 N 
+\i0\fs26\fsmilli13333 processes can run if there are 
+\i\fs24 N 
+\i0 CPU
+\fs26\fsmilli13333 s\'97without causing performance to deteriorate significantly. However, we must carefully control 
+\fs24 I/O 
+\fs26\fsmilli13333 to ensure that the data reach the appropriate processor\cf5 . Also, \cf2 since the 
+\fs24 CPU
+\fs26\fsmilli13333 s are separate, one may be sitting idle while another is overloaded, resulting in inefficiencies. These inefficiencies can be avoided if the processors share certain data structures. A multiprocessor system of this form\cf5  will allow\cf2  processes and resources\'97such as memory\'97 to be shared dynamically among the various processors and can lower the variance among the processors. Such a system must be written carefully, as we shall see in Chapter 5. Virtually all modern operating systems\'97including Windows, Mac 
+\fs24 OS X
+\fs26\fsmilli13333 , and Linux\'97now provide support for 
+\fs24 SMP
+\fs26\fsmilli13333 . 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf5 The difference between symmetric and asymmetric multiprocessing may \cf2 result from either hardware or software. Special hardware can differentiate the multiple processors, or the software can be written to allow only one boss and multiple workers. For instance, Sun Microsystems\'92 operating system 
+\fs24 S
+\fs26\fsmilli13333 un
+\fs24 OS 
+\fs26\fsmilli13333 Version 4 provided asymmetric multiprocessing, whereas Version 5 (Solaris) is symmetric on the same hardware. 
+\f1\fs24 \cf4 \
+}
