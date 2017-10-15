@@ -4,7 +4,7 @@
 }
 {\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
 }
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\margl1440\margr1440\vieww25400\viewh13420\viewkind0
 \deftab720
 \pard\pardeftab720\sl300\sa240\partightenfactor0
 
@@ -77,7 +77,7 @@ One of the most important aspects of operating systems is the ability to multipr
 
 \f0\fs26\fsmilli13333 \cf2 A time-shared operating system uses 
 \fs24 CPU 
-\fs26\fsmilli13333 scheduling and multiprogram- ming to provide each user with a small portion of a time-shared computer. Each user has at least one separate program in memory. A program loaded into memory and executing is called a 
+\fs26\fsmilli13333 scheduling and multiprogramming to provide each user with a small portion of a time-shared computer. Each user has at least one separate program in memory. A program loaded into memory and executing is called a 
 \b \cf3 process
 \b0 \cf2 . When a process executes, it typically executes for only a short time before it either finishes or needs to perform 
 \fs24 I/O
@@ -86,10 +86,10 @@ One of the most important aspects of operating systems is the ability to multipr
 \fs26\fsmilli13333 may be interactive; that is, output goes to a display for the user, and input comes from a user keyboard, mouse, or other device. Since interactive 
 \fs24 I/O 
 \fs26\fsmilli13333 typically runs at 
-\f1 \cf2 \'93
-\f0 \cf2 people speeds,
-\f1 \cf2 \'94 
-\f0 \cf2 it may take a long time to complete. Input, for example, may be bounded by the user\'92s typing speed; seven characters per second is fast for people but incredibly slow for computers. Rather than let the 
+\f1 \'93
+\f0 people speeds,
+\f1 \'94 
+\f0 it may take a long time to complete. Input, for example, may be bounded by the user\'92s typing speed; seven characters per second is fast for people but incredibly slow for computers. Rather than let the 
 \fs24 CPU 
 \fs26\fsmilli13333 sit idle as this interactive input takes place, the operating system will rapidly switch the 
 \fs24 CPU 
@@ -100,7 +100,7 @@ One of the most important aspects of operating systems is the ability to multipr
 \b \cf3 job scheduling
 \b0 \cf2 , which we discuss in Chapter 6. When the operating system selects a job from the job pool, it loads that job into memory for execution. Having several programs in memory at the same time requires some form of memory management, which we cover in Chapters 8 and 9. In addition, if several jobs are ready to run at the same time, the system must choose which job will run first. Making this decision is 
 \b\fs24 \cf3 CPU 
-\fs26\fsmilli13333 \cf3 scheduling
+\fs26\fsmilli13333 scheduling
 \b0 \cf2 , which is also discussed in Chapter 6. Finally, running multiple jobs concurrently requires that their ability to affect one another be limited in all phases of the operating system, including process scheduling, disk storage, and memory management. We discuss these considerations throughout the text. 
 \f1\fs24 \cf4 \
 
