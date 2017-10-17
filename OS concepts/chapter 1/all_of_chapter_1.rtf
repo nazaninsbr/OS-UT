@@ -1,0 +1,672 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+\red133\green0\blue175;\red255\green0\blue0;\red85\green142\blue40;\red102\green177\blue50;}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+\csgenericrgb\c52157\c0\c68627;\csgenericrgb\c100000\c0\c0;\csgenericrgb\c33333\c55686\c15686;\csgenericrgb\c40000\c69412\c19608;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+An 
+\b \cf3 operating system 
+\b0 \cf2 is a program that manages a computer\'92s hardware. It also provides a basis for application programs and acts as an intermediary between the computer user and the computer hardware. some operating systems are designed to be 
+\i\b convenient, 
+\i0\b0 others to be 
+\i\b efficient, 
+\i0\b0 and others to be some combination of the two. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A computer system can be divided roughly into four components: the 
+\i\b hardware, 
+\i0\b0 the 
+\i\b operating system, 
+\i0\b0 the 
+\i\b application programs, 
+\i0\b0 and the 
+\i\b users. 
+\i0\b0 The operating system controls the hardware and coordinates its use among the various application programs for the various users. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 We can also view a computer system as consisting of hardware, software, and data. The operating system provides the means for proper use of these resources in the operation of the computer system. An operating system is similar to a government. Like a government, it performs no useful function by itself. It simply provides an 
+\i\b environment 
+\i0\b0 within which other programs can do useful work. 
+\f1\fs24 \cf4 \
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 User View:\
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+PC
+\fs26\fsmilli13333 , consisting of a monitor, keyboard, mouse, and system unit. Such a system is designed for one user to monopolize its resources. The goal is to maximize the work (or play) that the user is performing. In this case, the operating system is designed mostly for 
+\b \cf3 ease of use
+\b0 \cf2 , with some attention paid to performance and none paid to 
+\b \cf3 resource utilization
+\b0 \cf2 \'97how various hardware and software resources are shared. Performance is, of course, important to the user; but such systems are optimized for the single-user experience rather than the requirements of multiple users. \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf2 In other cases, a user sits at a terminal connected to a 
+\b \cf3 mainframe 
+\b0 \cf2 or a 
+\b \cf3 minicomputer
+\b0 \cf2 . Other users are accessing the same computer through other terminals. These users share resources and may exchange information. The operating system in such cases is designed to maximize resource utilization \'97 to assure that all available 
+\fs24 CPU 
+\fs26\fsmilli13333 time, memory, and 
+\fs24 I/O 
+\fs26\fsmilli13333 are used efficiently and that no individual user takes more than her fair share. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 In still other cases, users sit at 
+\b \cf3 workstations 
+\b0 \cf2 connected to networks of other workstations and 
+\b \cf3 servers
+\b0 \cf2 . These users have dedicated resources at their disposal, but they also share resources such as networking and servers, including file, compute, and print servers. Therefore, their operating system is designed to compromise between individual usability and resource utilization. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Some computers have little or no user view. For example, embedded computers in home devices and automobiles may have numeric keypads and may turn indicator lights on or off to show status, but they and their operating systems are designed primarily to run without user intervention. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 System View:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+we can view an operating system as a 
+\b \cf3 resource allocator
+\b0 \cf2 . A computer system has many resources that may be required to solve a problem: 
+\fs24 CPU 
+\fs26\fsmilli13333 time, memory space, file-storage space, 
+\fs24 I/O 
+\fs26\fsmilli13333 devices, and so on. The operating system acts as the manager of these resources. Facing numerous and possibly conflicting requests for resources, the operating system must decide how to allocate them to specific programs and users so that it can operate the computer system efficiently and fairly. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A slightly different view of an operating system emphasizes the need to control the various 
+\fs24 I/O 
+\fs26\fsmilli13333 devices and user programs. An operating system is a control program. A 
+\b \cf3 control program 
+\b0 \cf2 manages the execution of user programs to prevent errors and improper use of the computer. It is especially concerned with the operation and control of 
+\fs24 I/O 
+\fs26\fsmilli13333 devices. 
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 \
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+In general, we have no completely adequate definition of an operating system. Operating systems exist because they offer a reasonable way to solve the problem of creating a usable computing system. The fundamental goal of computer systems is to execute user programs and to make solving user problems easier.\
+operating system is the one program running at all times on the computer\'97usually called the 
+\b \cf3 kernel
+\b0 \cf2 . (Along with the kernel, there are two other types of programs: 
+\b \cf3 system programs
+\b0 \cf2 , which are associated with the operating system but are not necessarily part of the kernel, and application programs, which include all programs not associated with the operation of the system.) 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Mobile operating systems often include not only a core kernel but also 
+\b \cf3 middleware
+\b0 \cf2 \'97a set of software frameworks that provide additional services to application developers. 
+\f1\fs24 \cf4 \
+\cf7 READ FROM NOTES: 3 things the os must do + is the os really running all the time?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\b\fs36 \cf6 1.2: Computer-System Operation
+\b0\fs26\fsmilli13333  \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf2 A modern general-purpose computer system consists of one or more 
+\fs24 CPU
+\fs26\fsmilli13333 s and a number of device controllers connected through a common bus that provides access to shared memory (Figure 1.2). Each device controller is in charge of a specific type of device (for example, disk drives, audio devices, or video displays). The 
+\fs24 CPU 
+\fs26\fsmilli13333 and the device controllers can execute in parallel, competing for memory cycles. To ensure orderly access to the shared memory, a memory controller synchronizes access to the memory. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 For a computer to start running\'97for instance, when it is powered up or rebooted\'97it needs to have an initial program to run. This initial program, or 
+\b \cf3 bootstrap program
+\b0 \cf2 , tends to be simple. Typically, it is stored within the computer hardware in read-only memory (
+\b\fs24 \cf3 ROM
+\b0\fs26\fsmilli13333 \cf2 ) or electrically erasable programmable read-only memory (
+\b\fs24 \cf3 EEPROM
+\b0\fs26\fsmilli13333 \cf2 ), known by the general term 
+\b \cf3 firmware
+\b0 \cf2 . It initializes all aspects of the system, from 
+\fs24 CPU 
+\fs26\fsmilli13333 registers to device controllers to memory contents. The bootstrap program must know how to load the operating system and how to start executing that system. To accomplish 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 this goal, the bootstrap program must locate the operating-system kernel and load it into memory. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Once the kernel is loaded and executing, it can start providing services to the system and its users. Some services are provided outside of the kernel, by system programs that are loaded into memory at boot time to become 
+\b \cf3 system processes
+\b0 \cf2 , or 
+\b \cf3 system daemons 
+\b0 \cf2 that run the entire time the kernel is running. On 
+\fs24 UNIX
+\fs26\fsmilli13333 , the first system process is 
+\f1 \cf2 \'93
+\f0 \cf2 init,
+\f1 \cf2 \'94 
+\f0 \cf2 and it starts many other daemons. Once this phase is complete, the system is fully booted, and the system waits for some event to occur. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The occurrence of an event is usually signaled by an 
+\b \cf3 interrupt 
+\b0 \cf2 from either the hardware or the software. Hardware may trigger an interrupt at any time by sending a signal to the 
+\fs24 CPU
+\fs26\fsmilli13333 , usually by way of the system bus. Software may trigger an interrupt by executing a special operation called a 
+\b \cf3 system call 
+\b0 \cf2 (also called a 
+\b \cf3 monitor call
+\b0 \cf2 ). 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 When the 
+\fs24 CPU 
+\fs26\fsmilli13333 is interrupted, it stops what it is doing and immediately transfers execution to a fixed location. The fixed location usually contains the starting address where the service routine for the interrupt is located. The interrupt service routine executes; on completion, the 
+\fs24 CPU 
+\fs26\fsmilli13333 resumes the interrupted computation. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 When the 
+\fs24 CPU 
+\fs26\fsmilli13333 is interrupted, it stops what it is doing and immediately transfers execution to a fixed location. The fixed location usually contains the starting address where the service routine for the interrupt is located. The interrupt service routine executes; on completion, the 
+\fs24 CPU 
+\fs26\fsmilli13333 resumes the interrupted computation. A timeline of this operation is shown in Figure 1.3. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Interrupts are an important part of a computer architecture. Each computer design has its own interrupt mechanism, but several functions are common. The interrupt must transfer control to the appropriate interrupt service routine. The straightforward method for handling this transfer would be to invoke a generic routine to examine the interrupt information. The routine, in turn, would call the interrupt-specific handler. However, interrupts must be handled quickly. Since only a predefined number of interrupts is possible, a table of pointers to interrupt routines can be used instead to provide the necessary speed. The interrupt routine is called indirectly through the table, with no intermediate routine needed. Generally, the table of pointers is stored in low memory (the first hundred or so locations). These locations hold the addresses of the interrupt service routines for the various devices. This array, or 
+\b \cf3 interrupt vector
+\b0 \cf2 , of addresses is then indexed by a unique device number, given with the interrupt request, to provide the address of the interrupt service routine for the interrupting device. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The interrupt architecture must also save the address of the interrupted instruction. Many old designs simply stored the interrupt address in a fixed location or in a location indexed by the device number. More recent architectures store the return address on the system stack. If the interrupt routine needs to modify the processor state\'97for instance, by modifying register values\'97it must explicitly save the current state and then restore that state before returning. After the interrupt is serviced, the saved return address is loaded into the program counter, and the interrupted computation resumes as though the interrupt had not occurred. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Storage:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+The basic unit of computer storage is the 
+\b \cf3 bit
+\b0 \cf2 . A bit can contain one of two values, 0 and 1. A 
+\b \cf3 byte 
+\b0 \cf2 is 8 bits, and on most computers it is the smallest convenient chunk of storage. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The 
+\fs24 CPU 
+\fs26\fsmilli13333 can load instructions only from memory, so any programs to run must be stored there. General-purpose computers run most of their programs from rewritable memory, called main memory (also called 
+\b \cf3 random-access memory
+\b0 \cf2 , or 
+\b\fs24 \cf3 RAM
+\b0\fs26\fsmilli13333 \cf2 ). Main memory commonly is implemented in a semiconductor technology called 
+\b \cf3 dynamic random-access memory \cf2 (
+\fs24 \cf3 DRAM
+\fs26\fsmilli13333 \cf2 )
+\b0 \cf2 . 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Computers use other forms of memory as well. We have already mentioned read-only memory, 
+\fs24 ROM
+\fs26\fsmilli13333 ) and electrically erasable programmable read-only memory, 
+\fs24 EEPROM
+\fs26\fsmilli13333 ). Because 
+\fs24 ROM 
+\fs26\fsmilli13333 cannot be changed, only static programs, such as the bootstrap program described earlier, are stored there. The immutability of 
+\fs24 ROM 
+\fs26\fsmilli13333 is of use in game cartridges. 
+\fs24 EEPROM 
+\fs26\fsmilli13333 can be changed but cannot be changed frequently and so contains mostly static programs. For example, smartphones have 
+\fs24 EEPROM 
+\fs26\fsmilli13333 to store their factory-installed programs. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The 
+\f1\fs29\fsmilli14667 \cf2 load 
+\f0\fs26\fsmilli13333 \cf2 instruction moves a byte or word from main memory to an internal register within the 
+\fs24 CPU
+\fs26\fsmilli13333 , whereas the 
+\f1\fs29\fsmilli14667 \cf2 store 
+\f0\fs26\fsmilli13333 \cf2 instruction moves the content of a register to main memory. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A typical instruction\'96execution cycle, as executed on a system with a 
+\b \cf3 von Neumann architecture
+\b0 \cf2 , first fetches an instruction from memory and stores that instruction in the 
+\b \cf3 instruction register
+\b0 \cf2 . The instruction is then decoded and may cause operands to be fetched from memory and stored in some internal register. After the instruction on the operands has been executed, the result may be stored back in memory. Notice that the memory unit sees only a stream of memory addresses. It does not know how they are generated (by the instruction counter, indexing, indirection, literal addresses, or some other means) or what they are for (instructions or data). 
+\f1\fs24 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Main memory is usually too small to store all needed programs and data permanently. \cf3 \
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Main memory is a \cf3 volatile \cf2 storage device that loses its contents when power is turned off or otherwise lost. \cf3 \uc0\u8232 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\b0 \cf2 Thus, most computer systems provide 
+\b \cf3 secondary storage 
+\b0 \cf2 as an extension of main memory. The main requirement for secondary storage is that it be able to hold large quantities of data permanently. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The higher levels are expensive, but they are fast. As we move down the hierarchy, the cost per bit generally decreases, whereas the access time generally increases. 
+\f1\fs24 \cf4 \
+
+\f3\fs26\fsmilli13333 \cf8 see image 1. \
+
+\f0 \cf2 In addition to differing in speed and cost, the various storage systems are either volatile or nonvolatile. As mentioned earlier, 
+\b \cf3 volatile storage 
+\b0 \cf2 loses its contents when the power to the device is removed. In the absence of expensive battery and generator backup systems, data must be written to 
+\b \cf3 nonvolatile storage 
+\b0 \cf2 for safekeeping. the storage systems above the solid-state disk are volatile, whereas those including the solid-state disk and below are nonvolatile. 
+\f1\fs24 \cf4 \
+
+\f0\b\fs26\fsmilli13333 \cf3 Solid-state disks 
+\b0 \cf2 have several variants but in general are faster than magnetic disks and are nonvolatile. One type of solid-state disk stores data in a large 
+\fs24 DRAM 
+\fs26\fsmilli13333 array during normal operation but also contains a hidden magnetic hard disk and a battery for backup power. If external power is interrupted, this solid-state disk\'92s controller copies the data from 
+\fs24 RAM 
+\fs26\fsmilli13333 to the magnetic disk. When external power is restored, the controller copies the data back into 
+\fs24 RAM
+\fs26\fsmilli13333 . Another form of solid-state disk is flash memory, which is popular in cameras and 
+\b \cf3 personal digital assistants \cf2 (
+\fs24 \cf3 PDA
+\fs26\fsmilli13333 \cf3 s\cf2 )
+\b0 \cf2 , in robots, and increasingly for storage on general-purpose computers. Flash memory is slower than 
+\fs24 DRAM 
+\fs26\fsmilli13333 but needs no power to retain its contents. Another form of nonvolatile storage is 
+\b\fs24 \cf3 NVRAM
+\b0\fs26\fsmilli13333 \cf2 , which is 
+\fs24 DRAM 
+\fs26\fsmilli13333 with battery backup power. This memory can be as fast as 
+\fs24 DRAM 
+\fs26\fsmilli13333 and (as long as the battery lasts) is nonvolatile. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 I/O:
+\f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf2 Storage is only one of many types of 
+\fs24 I/O 
+\fs26\fsmilli13333 devices within a computer. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A general-purpose computer system consists of 
+\fs24 CPU
+\fs26\fsmilli13333 s and multiple device controllers that are connected through a common bus. Each device controller is in charge of a specific type of device. Depending on the controller, more than one device may be attached. The device controller is responsible for moving the data between the peripheral devices that it controls and its local buffer storage. Typically, operating systems have a 
+\b \cf3 device driver 
+\b0 \cf2 for each device controller. This device driver understands the device controller and provides the rest of the operating system with a uniform interface to the device. 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.3: Computer-System Architecture\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf5 Single-Processor Systems:
+\f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf2 On a single- processor system, there is one main 
+\fs24 CPU 
+\fs26\fsmilli13333 capable of executing a general-purpose instruction set, including instructions from user processes. Almost all single- processor systems have other special-purpose processors as well. They may come in the form of device-specific processors, such as disk, keyboard, and graphics controllers; or, on mainframes, they may come in the form of more general-purpose processors, such as 
+\fs24 I/O 
+\fs26\fsmilli13333 processors that move data rapidly among the components of the system. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 All of these special-purpose processors run a limited instruction set and do not run user processes. Sometimes, they are managed by the operating system, in that the operating system sends them information about their next task and monitors their status. In other systems or circumstances, special-purpose processors are low-level components built into the hardware. The operating system cannot communicate with these processors; they do their jobs autonomously. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Multiprocessor Systems:
+\f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b \cf3 multiprocessor systems 
+\b0 \cf2 (also known as 
+\b \cf3 parallel systems 
+\b0 \cf2 or 
+\b \cf3 multicore systems
+\b0 \cf2 ) have begun to dominate the landscape of computing. Such systems have two or more processors in close communication, sharing the computer bus and sometimes the clock, memory, and peripheral devices. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Multiprocessor systems have three main advantages: 
+\f1\fs24 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
+\ls2\ilvl0
+\f0\b\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Increased throughput. By increasing the number of processors, we expect to get more work done in less time. The speed-up ratio with 
+\i\fs24 N 
+\i0\fs26\fsmilli13333 processors is not 
+\i\fs24 N
+\fs26\fsmilli13333 , 
+\i0 however; rather, it is less than 
+\i\fs24 N
+\fs26\fsmilli13333 . 
+\i0 When multiple processors cooperate on a task, a certain amount of overhead is incurred in keeping all the parts working correctly. This overhead, plus contention for shared resources, lowers the expected gain from additional processors. Similarly, 
+\i\fs24 N 
+\i0\fs26\fsmilli13333 programmers working closely together do not produce 
+\i\fs24 N 
+\i0\fs26\fsmilli13333 times the amount of work a single programmer would produce. \cf3 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Economy of scale. Multiprocessor systems can cost less than equivalent multiple single-processor systems, because they can share peripherals, mass storage, and power supplies. If several programs operate on the same set of data, it is cheaper to store those data on one disk and to have all the processors share them than to have many computers with local disks and many copies of the data. \cf3 \uc0\u8232 \
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Increased reliability. If functions can be distributed properly among several processors, then the failure of one processor will not halt the system, only slow it down. If we have ten processors and one fails, then each of the remaining nine processors can pick up a share of the work of the failed processor. Thus, the entire system runs only 10 percent slower, rather than failing altogether. \cf3 \uc0\u8232 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\b0 \cf2 The ability to continue providing service proportional to the level of surviving hardware is called 
+\b \cf3 graceful degradation
+\b0 \cf2 . Some systems go beyond graceful degradation and are called 
+\b \cf3 fault tolerant
+\b0 \cf2 , because they can suffer a failure of any single component and still continue operation. Fault tolerance requires a mechanism to allow the failure to be detected, diagnosed, and, if possible, corrected. The 
+\fs24 HP 
+\fs26\fsmilli13333 NonStop (formerly Tandem) system uses both hardware and software duplication to ensure continued operation despite faults. The system consists of multiple pairs of 
+\fs24 CPU
+\fs26\fsmilli13333 s, working in lockstep. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The multiple-processor systems in use today are of two types. Some systems use 
+\b \cf3 asymmetric multiprocessing
+\b0 \cf2 , in which each processor is assigned a specific task. A 
+\i\b \cf2 boss 
+\i0\b0 \cf2 processor controls the system; the other processors either look to the boss for instruction or have predefined tasks. This scheme defines a boss\'96worker relationship. The boss processor schedules and allocates work to the worker processors. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The most common systems use 
+\b \cf3 symmetric multiprocessing \cf2 (
+\fs24 \cf3 SMP
+\fs26\fsmilli13333 \cf2 )
+\b0 \cf2 , in which each processor performs all tasks within the operating system. 
+\fs24 SMP 
+\fs26\fsmilli13333 means that all processors are peers; no boss\'96worker relationship exists between processors. Figure 1.6 illustrates a typical 
+\fs24 SMP 
+\fs26\fsmilli13333 architecture. Notice that each processor has its own set of registers, as well as a private\'97or local \'97cache. However, all processors share physical memory. The benefit of this model is that many processes can run simultaneously\'97
+\i\fs24 \cf2 N 
+\i0\fs26\fsmilli13333 \cf2 processes can run if there are 
+\i\fs24 \cf2 N 
+\i0 \cf2 CPU
+\fs26\fsmilli13333 s\'97without causing performance to deteriorate significantly. However, we must carefully control 
+\fs24 I/O 
+\fs26\fsmilli13333 to ensure that the data reach the appropriate processor. Also, since the 
+\fs24 CPU
+\fs26\fsmilli13333 s are separate, one may be sitting idle while another is overloaded, resulting in inefficiencies. These inefficiencies can be avoided if the processors share certain data structures. A multiprocessor system of this form will allow processes and resources\'97such as memory\'97 to be shared dynamically among the various processors and can lower the variance among the processors. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The difference between symmetric and asymmetric multiprocessing may result from either hardware or software. Special hardware can differentiate the multiple processors, or the software can be written to allow only one boss and multiple workers. 
+\f1\fs24 \cf4 \
+
+\f0 \cf2 UMA 
+\fs26\fsmilli13333 is defined as the situation in which access to any 
+\fs24 RAM 
+\fs26\fsmilli13333 from any 
+\fs24 CPU 
+\fs26\fsmilli13333 takes the same amount of time. With 
+\fs24 NUMA
+\fs26\fsmilli13333 , some parts of memory may take longer to access than other parts, creating a performance penalty. Operating systems can minimize the 
+\fs24 NUMA 
+\fs26\fsmilli13333 penalty through resource management, as discussed in Section 9.5.4. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A recent trend in 
+\fs24 CPU 
+\fs26\fsmilli13333 design is to include multiple computing 
+\b \cf3 cores 
+\b0 \cf2 on a single chip. Such multiprocessor systems are termed 
+\b \cf3 multicore
+\b0 \cf2 . They can be more efficient than multiple chips with single cores because on-chip communication is faster than between-chip communication. In addition, one chip with multiple cores uses significantly less power than multiple single-core chips. \
+
+\b \cf3 blade servers 
+\b0 \cf2 are a relatively recent development in which multiple processor boards, 
+\fs24 I/O 
+\fs26\fsmilli13333 boards, and networking boards are placed in the same chassis. The difference between these and traditional multiprocessor systems is that each blade-processor board boots independently and runs its own operating system. Some blade-server boards are multiprocessor as well, which blurs the lines between types of computers. In essence, these servers consist of multiple independent multiprocessor systems. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Clustered Systems:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+hey are composed of two or more individual systems\'97or nodes\'97joined together. Such systems are considered 
+\b \cf3 loosely coupled
+\b0 \cf2 . Each node may be a single processor system or a multicore system. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The generally accepted definition is that clustered computers share storage and are closely linked via a local-area network 
+\fs24 LAN 
+\fs26\fsmilli13333 (as described in Chapter 17) or a faster interconnect, such as InfiniBand. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Clustering is usually used to provide 
+\b \cf3 high-availability 
+\b0 \cf2 service\'97that is, service will continue even if one or more systems in the cluster fail. Generally, we obtain high availability by adding a level of redundancy in the system. A layer of cluster software runs on the cluster nodes. Each node can monitor one or more of the others (over the 
+\fs24 LAN
+\fs26\fsmilli13333 ). If the monitored machine fails, the monitoring machine can take ownership of its storage and restart the applications that were running on the failed machine. The users and clients of the applications see only a brief interruption of service. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Clustering can be structured asymmetrically or symmetrically. In 
+\b \cf3 asym- metric clustering
+\b0 \cf2 , one machine is in 
+\b \cf3 hot-standby mode 
+\b0 \cf2 while the other is running the applications. The hot-standby host machine does nothing but monitor the active server. If that server fails, the hot-standby host becomes the active server. In 
+\b \cf3 symmetric clustering
+\b0 \cf2 , two or more hosts are running applications and are monitoring each other. This structure is obviously more efficient, as it uses all of the available hardware. However it does require that more than one application be available to run. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Since a cluster consists of several computer systems connected via a network, clusters can also be used to provide 
+\b \cf3 high-performance computing 
+\b0 \cf2 environments. Such systems can supply significantly greater computational power than single-processor or even 
+\fs24 SMP 
+\fs26\fsmilli13333 systems because they can run an application concurrently on all computers in the cluster. The application must have been written specifically to take advantage of the cluster, however. This involves a technique known as 
+\b \cf3 parallelization
+\b0 \cf2 , which divides a program into separate components that run in parallel on individual computers in the cluster. Typically, these applications are designed so that once each computing node in the cluster has solved its portion of the problem, the results from all the nodes are combined into a final solution. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Parallel clusters allow multiple hosts to access the same data on shared storage. Because most operating systems lack support for simultaneous data access by multiple hosts, parallel clusters usually require the use of special versions of software and special releases of applications. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Each machine has full access to all data in the database. To provide this shared access, the system must also supply access control and locking to ensure that no conflicting operations occur. This function, commonly known as a 
+\b \cf3 distributed lock manager \cf2 (
+\fs24 \cf3 DLM
+\fs26\fsmilli13333 \cf2 )
+\b0 \cf2 , is included in some cluster technology. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Cluster technology is changing rapidly. Some cluster products support dozens of systems in a cluster, as well as clustered nodes that are separated by miles. Many of these improvements are made possible by 
+\b \cf3 storage-area networks \cf2 (
+\fs24 \cf3 SAN
+\fs26\fsmilli13333 \cf3 s\cf2 )
+\b0 \cf2 , as described in Section 10.3.3, which allow many systems to attach to a pool of storage. If the applications and their data are stored on the 
+\fs24 SAN
+\fs26\fsmilli13333 , then the cluster software can assign the application to run on any host that is attached to the 
+\fs24 SAN
+\fs26\fsmilli13333 . If the host fails, then any other host can take over. In a database cluster, dozens of hosts can share the same database, greatly increasing performance and reliability. Figure 1.8 depicts the general structure of a clustered system. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Beowulf clusters are designed to solve high-performance computing tasks. A Beowulf cluster consists of commodity hardware\'97such as personal computers\'97connected via a simple local-area network. No single specific software package is required to construct a cluster. Rather, the nodes use a set of open-source software libraries to communicate with one another. Thus, there are a variety of approaches to constructing a Beowulf cluster. Typically, though, Beowulf computing nodes run the Linux operating system. Since Beowulf clusters require no special hardware and operate using open-source software that is available free, they offer a low-cost strategy for building a high-performance computing cluster. In fact, some Beowulf clusters built from discarded personal computers are using hundreds of nodes to solve computationally expensive scientific computing problems. 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.4: Computer-System structure\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+An operating system provides the environment within which programs are executed. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 One of the most important aspects of operating systems is the ability to multiprogram. A single program cannot, in general, keep either the 
+\fs24 CPU 
+\fs26\fsmilli13333 or the 
+\fs24 I/O 
+\fs26\fsmilli13333 devices busy at all times. Single users frequently have multiple programs running. 
+\b \cf3 Multiprogramming 
+\b0 \cf2 increases 
+\fs24 CPU 
+\fs26\fsmilli13333 utilization by organizing jobs (code and data) so that the 
+\fs24 CPU 
+\fs26\fsmilli13333 always has one to execute. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The idea is as follows: The operating system keeps several jobs in memory simultaneously (Figure 1.9). Since, in general, main memory is too small to accommodate all jobs, the jobs are kept initially on the disk in the 
+\b \cf3 job pool
+\b0 \cf2 . This pool consists of all processes residing on disk awaiting allocation of main memory. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The set of jobs in memory can be a subset of the jobs kept in the job pool. The operating system picks and begins to execute one of the jobs in memory. Eventually, the job may have to wait for some task, such as an 
+\fs24 I/O 
+\fs26\fsmilli13333 operation, to complete. In a non-multiprogrammed system, the 
+\fs24 CPU 
+\fs26\fsmilli13333 would sit idle. In a multiprogrammed system, the operating system simply switches to, and executes, another job. When 
+\i\b \cf2 that 
+\i0\b0 \cf2 job needs to wait, the 
+\fs24 CPU 
+\fs26\fsmilli13333 switches to 
+\i\b \cf2 another 
+\i0\b0 \cf2 job, and so on. Eventually, the first job finishes waiting and gets the 
+\fs24 CPU 
+\fs26\fsmilli13333 back. As long as at least one job needs to execute, the 
+\fs24 CPU 
+\fs26\fsmilli13333 is never idle. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 This idea is common in other life situations. A lawyer does not work for only one client at a time, for example. While one case is waiting to go to trial or have papers typed, the lawyer can work on another case. If he has enough clients, the lawyer will never be idle for lack of work. (Idle lawyers tend to become politicians, so there is a certain social value in keeping lawyers busy.) 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Multiprogrammed systems provide an environment in which the various system resources (for example, 
+\fs24 CPU
+\fs26\fsmilli13333 , memory, and peripheral devices) are utilized effectively, but they do not provide for user interaction with the computer system. 
+\b \cf3 Time sharing 
+\b0 \cf2 (or 
+\b \cf3 multitasking
+\b0 \cf2 ) is a logical extension of multiprogramming. In time-sharing systems, the 
+\fs24 CPU 
+\fs26\fsmilli13333 executes multiple jobs by switching among them, but the switches occur so frequently that the users can interact with each program while it is running. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Time sharing requires an 
+\b \cf3 interactive 
+\b0 \cf2 computer system, which provides direct communication between the user and the system. The user gives instructions to the operating system or to a program directly, using a input device such as a keyboard, mouse, touch pad, or touch screen, and waits for immediate results on an output device. Accordingly, the 
+\b \cf3 response time 
+\b0 \cf2 should be short\'97typically less than one second. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A time-shared operating system allows many users to share the computer simultaneously. Since each action or command in a time-shared system tends to be short, only a little 
+\fs24 CPU 
+\fs26\fsmilli13333 time is needed for each user. As the system switches rapidly from one user to the next, each user is given the impression that the entire computer system is dedicated to his use, even though it is being shared among many users. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A time-shared operating system uses 
+\fs24 CPU 
+\fs26\fsmilli13333 scheduling and multiprogram- ming to provide each user with a small portion of a time-shared computer. Each user has at least one separate program in memory. A program loaded into memory and executing is called a 
+\b \cf3 process
+\b0 \cf2 . When a process executes, it typically executes for only a short time before it either finishes or needs to perform 
+\fs24 I/O
+\fs26\fsmilli13333 . 
+\fs24 I/O 
+\fs26\fsmilli13333 may be interactive; that is, output goes to a display for the user, and input comes from a user keyboard, mouse, or other device. Since interactive 
+\fs24 I/O 
+\fs26\fsmilli13333 typically runs at 
+\f1 \cf2 \'93
+\f0 \cf2 people speeds,
+\f1 \cf2 \'94 
+\f0 \cf2 it may take a long time to complete. Input, for example, may be bounded by the user\'92s typing speed; seven characters per second is fast for people but incredibly slow for computers. Rather than let the 
+\fs24 CPU 
+\fs26\fsmilli13333 sit idle as this interactive input takes place, the operating system will rapidly switch the 
+\fs24 CPU 
+\fs26\fsmilli13333 to the program of some other user. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Time sharing and multiprogramming require that several jobs be kept simultaneously in memory. If several jobs are ready to be brought into memory, and if there is not enough room for all of them, then the system must choose among them. Making this decision involves 
+\b \cf3 job scheduling
+\b0 \cf2 , which we discuss in Chapter 6. When the operating system selects a job from the job pool, it loads that job into memory for execution. Having several programs in memory at the same time requires some form of memory management, which we cover in Chapters 8 and 9. In addition, if several jobs are ready to run at the same time, the system must choose which job will run first. Making this decision is 
+\b\fs24 \cf3 CPU 
+\fs26\fsmilli13333 \cf3 scheduling
+\b0 \cf2 , which is also discussed in Chapter 6. Finally, running multiple jobs concurrently requires that their ability to affect one another be limited in all phases of the operating system, including process scheduling, disk storage, and memory management. We discuss these considerations throughout the text. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 In a time-sharing system, the operating system must ensure reasonable response time. This goal is sometimes accomplished through 
+\b \cf3 swapping
+\b0 \cf2 , whereby processes are swapped in and out of main memory to the disk. A more common method for ensuring reasonable response time is 
+\b \cf3 virtual memory
+\b0 \cf2 , a technique that allows the execution of a process that is not completely in memory (Chapter 9). The main advantage of the virtual-memory scheme is that it enables users to run programs that are larger than actual 
+\b \cf3 physical memory
+\b0 \cf2 . Further, it abstracts main memory into a large, uniform array of storage, separating 
+\b \cf3 logical memory 
+\b0 \cf2 as viewed by the user from physical memory. This arrangement frees programmers from concern over memory-storage limitations. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A time-sharing system must also provide a file system (Chapters 11 and 12). The file system resides on a collection of disks; hence, disk management must be provided (Chapter 10). In addition, a time-sharing system provides a mechanism for protecting resources from inappropriate use (Chapter 14). To ensure orderly execution, the system must provide mechanisms for job synchronization and communication (Chapter 5), and it may ensure that jobs do not get stuck in a deadlock, forever waiting for one another (Chapter 7). 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.5: Computer-System Operations\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+As mentioned earlier, modern operating systems are 
+\b \cf3 interrupt driven
+\b0 \cf2 . If there are no processes to execute, no 
+\fs24 I/O 
+\fs26\fsmilli13333 devices to service, and no users to whom to respond, an operating system will sit quietly, waiting for something to happen. Events are almost always signaled by the occurrence of an interrupt or a trap. A 
+\b \cf3 trap 
+\b0 \cf2 (or an 
+\b \cf3 exception
+\b0 \cf2 ) is a software-generated interrupt caused either by an error (for example, division by zero or invalid memory access) or by a specific request from a user program that an operating-system service be performed. The interrupt-driven nature of an operating system defines that system\'92s general structure. For each type of interrupt, separate segments of code in the operating system determine what action should be taken. An interrupt service routine is provided to deal with the interrupt. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Since the operating system and the users share the hardware and software resources of the computer system, we need to make sure that an error in a user program could cause problems only for the one program running. With sharing, many processes could be adversely affected by a bug in one program. For example, if a process gets stuck in an infinite loop, this loop could prevent the correct operation of many other processes. More subtle errors can occur in a multiprogramming system, where one erroneous program might modify another program, the data of another program, or even the operating system itself. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Without protection against these sorts of errors, either the computer must execute only one process at a time or all output must be suspect. A properly designed operating system must ensure that an incorrect (or malicious) program cannot cause other programs to execute incorrectly. 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf6 \
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.11: Computing Environments\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf3 \expnd0\expndtw0\kerning0
+Mobile computing 
+\b0 \cf2 refers to computing on handheld smartphones and tablet computers. The memory capacity and processing speed of mobile devices, however, are more limited than those of 
+\fs24 PC
+\fs26\fsmilli13333 s. power consumption is such a concern, mobile devices often use processors that are smaller, are slower, and offer fewer processing cores than processors found on traditional desktop and laptop computers. 
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf6 1.12: Open-Source Operating Systems \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+Revenue can be generated through support contracts and the sale of hardware on which the software runs, for example. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Stallman in 1983 started the 
+\fs24 GNU 
+\fs26\fsmilli13333 project to create a free, open-source, 
+\fs24 UNIX
+\fs26\fsmilli13333 - compatible operating system. In 1985, he published the 
+\fs24 GNU 
+\fs26\fsmilli13333 Manifesto, which argues that all software should be free and open-sourced. He also formed the 
+\b \cf3 Free Software Foundation \cf2 (
+\fs24 \cf3 FSF
+\fs26\fsmilli13333 \cf2 ) 
+\b0 with the goal of encouraging the free exchange of software source code and the free use of that software. Rather than copyright its software, the 
+\fs24 FSF 
+\f1\fs26\fsmilli13333 \'93
+\f0 copylefts
+\f1 \'94 
+\f0 the software to encourage sharing and improvement. The 
+\b\fs24 \cf3 GNU 
+\fs26\fsmilli13333 General Public License \cf2 (
+\fs24 \cf3 GPL
+\fs26\fsmilli13333 \cf2 ) 
+\b0 codifies copylefting and is a common license under which free software is released. Fundamentally, 
+\fs24 GPL 
+\fs26\fsmilli13333 requires that the source code be distributed with any binaries and that any changes made to the source code be released under the same 
+\fs24 GPL 
+\fs26\fsmilli13333 license. 
+\f1\fs24 \cf4 \
+}
