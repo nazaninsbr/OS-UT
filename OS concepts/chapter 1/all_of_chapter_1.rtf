@@ -6,8 +6,9 @@
 {\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
 \csgenericrgb\c52157\c0\c68627;\csgenericrgb\c100000\c0\c0;\csgenericrgb\c33333\c55686\c15686;\csgenericrgb\c40000\c69412\c19608;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \deftab720
 \pard\pardeftab720\sl300\sa240\partightenfactor0
@@ -69,10 +70,8 @@ PC
 
 \f0\fs26\fsmilli13333 \cf2 Some computers have little or no user view. For example, embedded computers in home devices and automobiles may have numeric keypads and may turn indicator lights on or off to show status, but they and their operating systems are designed primarily to run without user intervention. 
 \f1\fs24 \cf4 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 System View:\
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
 we can view an operating system as a 
@@ -106,6 +105,7 @@ operating system is the one program running at all times on the computer\'97usua
 \b \cf3 middleware
 \b0 \cf2 \'97a set of software frameworks that provide additional services to application developers. 
 \f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
 \cf7 READ FROM NOTES: 3 things the os must do + is the os really running all the time?\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
@@ -143,10 +143,10 @@ operating system is the one program running at all times on the computer\'97usua
 \b0 \cf2 that run the entire time the kernel is running. On 
 \fs24 UNIX
 \fs26\fsmilli13333 , the first system process is 
-\f1 \cf2 \'93
-\f0 \cf2 init,
-\f1 \cf2 \'94 
-\f0 \cf2 and it starts many other daemons. Once this phase is complete, the system is fully booted, and the system waits for some event to occur. 
+\f1 \'93
+\f0 init,
+\f1 \'94 
+\f0 and it starts many other daemons. Once this phase is complete, the system is fully booted, and the system waits for some event to occur. 
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 The occurrence of an event is usually signaled by an 
@@ -181,10 +181,8 @@ operating system is the one program running at all times on the computer\'97usua
 
 \f0\fs26\fsmilli13333 \cf2 The interrupt architecture must also save the address of the interrupted instruction. Many old designs simply stored the interrupt address in a fixed location or in a location indexed by the device number. More recent architectures store the return address on the system stack. If the interrupt routine needs to modify the processor state\'97for instance, by modifying register values\'97it must explicitly save the current state and then restore that state before returning. After the interrupt is serviced, the saved return address is loaded into the program counter, and the interrupted computation resumes as though the interrupt had not occurred. 
 \f1\fs24 \cf4 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Storage:\
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
 The basic unit of computer storage is the 
@@ -204,7 +202,7 @@ The basic unit of computer storage is the
 \b \cf3 dynamic random-access memory \cf2 (
 \fs24 \cf3 DRAM
 \fs26\fsmilli13333 \cf2 )
-\b0 \cf2 . 
+\b0 . 
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 Computers use other forms of memory as well. We have already mentioned read-only memory, 
@@ -223,12 +221,12 @@ The basic unit of computer storage is the
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 The 
-\f1\fs29\fsmilli14667 \cf2 load 
-\f0\fs26\fsmilli13333 \cf2 instruction moves a byte or word from main memory to an internal register within the 
+\f1\fs29\fsmilli14667 load 
+\f0\fs26\fsmilli13333 instruction moves a byte or word from main memory to an internal register within the 
 \fs24 CPU
 \fs26\fsmilli13333 , whereas the 
-\f1\fs29\fsmilli14667 \cf2 store 
-\f0\fs26\fsmilli13333 \cf2 instruction moves the content of a register to main memory. 
+\f1\fs29\fsmilli14667 store 
+\f0\fs26\fsmilli13333 instruction moves the content of a register to main memory. 
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 A typical instruction\'96execution cycle, as executed on a system with a 
@@ -252,8 +250,10 @@ Main memory is a \cf3 volatile \cf2 storage device that loses its contents when 
 
 \f0\fs26\fsmilli13333 \cf2 The higher levels are expensive, but they are fast. As we move down the hierarchy, the cost per bit generally decreases, whereas the access time generally increases. 
 \f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f3\fs26\fsmilli13333 \cf8 see image 1. \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0 \cf2 In addition to differing in speed and cost, the various storage systems are either volatile or nonvolatile. As mentioned earlier, 
 \b \cf3 volatile storage 
@@ -272,8 +272,8 @@ Main memory is a \cf3 volatile \cf2 storage device that loses its contents when 
 \fs26\fsmilli13333 . Another form of solid-state disk is flash memory, which is popular in cameras and 
 \b \cf3 personal digital assistants \cf2 (
 \fs24 \cf3 PDA
-\fs26\fsmilli13333 \cf3 s\cf2 )
-\b0 \cf2 , in robots, and increasingly for storage on general-purpose computers. Flash memory is slower than 
+\fs26\fsmilli13333 s\cf2 )
+\b0 , in robots, and increasingly for storage on general-purpose computers. Flash memory is slower than 
 \fs24 DRAM 
 \fs26\fsmilli13333 but needs no power to retain its contents. Another form of nonvolatile storage is 
 \b\fs24 \cf3 NVRAM
@@ -283,12 +283,10 @@ Main memory is a \cf3 volatile \cf2 storage device that loses its contents when 
 \fs24 DRAM 
 \fs26\fsmilli13333 and (as long as the battery lasts) is nonvolatile. 
 \f1\fs24 \cf4 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 I/O:
 \f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0 \cf2 Storage is only one of many types of 
 \fs24 I/O 
@@ -308,7 +306,6 @@ Main memory is a \cf3 volatile \cf2 storage device that loses its contents when 
 \cf5 Single-Processor Systems:
 \f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0 \cf2 On a single- processor system, there is one main 
 \fs24 CPU 
@@ -319,12 +316,10 @@ Main memory is a \cf3 volatile \cf2 storage device that loses its contents when 
 
 \f0\fs26\fsmilli13333 \cf2 All of these special-purpose processors run a limited instruction set and do not run user processes. Sometimes, they are managed by the operating system, in that the operating system sends them information about their next task and monitors their status. In other systems or circumstances, special-purpose processors are low-level components built into the hardware. The operating system cannot communicate with these processors; they do their jobs autonomously. 
 \f1\fs24 \cf4 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Multiprocessor Systems:
 \f3\b0\fs26\fsmilli13333 \cf6 \expnd0\expndtw0\kerning0
 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\b \cf3 multiprocessor systems 
 \b0 \cf2 (also known as 
@@ -352,7 +347,6 @@ Increased throughput. By increasing the number of processors, we expect to get m
 \i0\fs26\fsmilli13333 programmers working closely together do not produce 
 \i\fs24 N 
 \i0\fs26\fsmilli13333 times the amount of work a single programmer would produce. \cf3 \uc0\u8232 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
 \ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
 Economy of scale. Multiprocessor systems can cost less than equivalent multiple single-processor systems, because they can share peripherals, mass storage, and power supplies. If several programs operate on the same set of data, it is cheaper to store those data on one disk and to have all the processors share them than to have many computers with local disks and many copies of the data. \cf3 \uc0\u8232 \
 \ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
@@ -373,23 +367,23 @@ Increased reliability. If functions can be distributed properly among several pr
 \f0\fs26\fsmilli13333 \cf2 The multiple-processor systems in use today are of two types. Some systems use 
 \b \cf3 asymmetric multiprocessing
 \b0 \cf2 , in which each processor is assigned a specific task. A 
-\i\b \cf2 boss 
-\i0\b0 \cf2 processor controls the system; the other processors either look to the boss for instruction or have predefined tasks. This scheme defines a boss\'96worker relationship. The boss processor schedules and allocates work to the worker processors. 
+\i\b boss 
+\i0\b0 processor controls the system; the other processors either look to the boss for instruction or have predefined tasks. This scheme defines a boss\'96worker relationship. The boss processor schedules and allocates work to the worker processors. 
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 The most common systems use 
 \b \cf3 symmetric multiprocessing \cf2 (
 \fs24 \cf3 SMP
 \fs26\fsmilli13333 \cf2 )
-\b0 \cf2 , in which each processor performs all tasks within the operating system. 
+\b0 , in which each processor performs all tasks within the operating system. 
 \fs24 SMP 
 \fs26\fsmilli13333 means that all processors are peers; no boss\'96worker relationship exists between processors. Figure 1.6 illustrates a typical 
 \fs24 SMP 
 \fs26\fsmilli13333 architecture. Notice that each processor has its own set of registers, as well as a private\'97or local \'97cache. However, all processors share physical memory. The benefit of this model is that many processes can run simultaneously\'97
-\i\fs24 \cf2 N 
-\i0\fs26\fsmilli13333 \cf2 processes can run if there are 
-\i\fs24 \cf2 N 
-\i0 \cf2 CPU
+\i\fs24 N 
+\i0\fs26\fsmilli13333 processes can run if there are 
+\i\fs24 N 
+\i0 CPU
 \fs26\fsmilli13333 s\'97without causing performance to deteriorate significantly. However, we must carefully control 
 \fs24 I/O 
 \fs26\fsmilli13333 to ensure that the data reach the appropriate processor. Also, since the 
@@ -399,6 +393,7 @@ Increased reliability. If functions can be distributed properly among several pr
 
 \f0\fs26\fsmilli13333 \cf2 The difference between symmetric and asymmetric multiprocessing may result from either hardware or software. Special hardware can differentiate the multiple processors, or the software can be written to allow only one boss and multiple workers. 
 \f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0 \cf2 UMA 
 \fs26\fsmilli13333 is defined as the situation in which access to any 
@@ -411,6 +406,7 @@ Increased reliability. If functions can be distributed properly among several pr
 \fs24 NUMA 
 \fs26\fsmilli13333 penalty through resource management, as discussed in Section 9.5.4. 
 \f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\fs26\fsmilli13333 \cf2 A recent trend in 
 \fs24 CPU 
@@ -425,10 +421,8 @@ Increased reliability. If functions can be distributed properly among several pr
 \fs24 I/O 
 \fs26\fsmilli13333 boards, and networking boards are placed in the same chassis. The difference between these and traditional multiprocessor systems is that each blade-processor board boots independently and runs its own operating system. Some blade-server boards are multiprocessor as well, which blurs the lines between types of computers. In essence, these servers consist of multiple independent multiprocessor systems. 
 \f1\fs24 \cf4 \
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Clustered Systems:\
-\pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
 hey are composed of two or more individual systems\'97or nodes\'97joined together. Such systems are considered 
@@ -473,14 +467,14 @@ hey are composed of two or more individual systems\'97or nodes\'97joined togethe
 \b \cf3 distributed lock manager \cf2 (
 \fs24 \cf3 DLM
 \fs26\fsmilli13333 \cf2 )
-\b0 \cf2 , is included in some cluster technology. 
+\b0 , is included in some cluster technology. 
 \f1\fs24 \cf4 \
 
 \f0\fs26\fsmilli13333 \cf2 Cluster technology is changing rapidly. Some cluster products support dozens of systems in a cluster, as well as clustered nodes that are separated by miles. Many of these improvements are made possible by 
 \b \cf3 storage-area networks \cf2 (
 \fs24 \cf3 SAN
-\fs26\fsmilli13333 \cf3 s\cf2 )
-\b0 \cf2 , as described in Section 10.3.3, which allow many systems to attach to a pool of storage. If the applications and their data are stored on the 
+\fs26\fsmilli13333 s\cf2 )
+\b0 , as described in Section 10.3.3, which allow many systems to attach to a pool of storage. If the applications and their data are stored on the 
 \fs24 SAN
 \fs26\fsmilli13333 , then the cluster software can assign the application to run on any host that is attached to the 
 \fs24 SAN
@@ -521,12 +515,12 @@ An operating system provides the environment within which programs are executed.
 \fs26\fsmilli13333 operation, to complete. In a non-multiprogrammed system, the 
 \fs24 CPU 
 \fs26\fsmilli13333 would sit idle. In a multiprogrammed system, the operating system simply switches to, and executes, another job. When 
-\i\b \cf2 that 
-\i0\b0 \cf2 job needs to wait, the 
+\i\b that 
+\i0\b0 job needs to wait, the 
 \fs24 CPU 
 \fs26\fsmilli13333 switches to 
-\i\b \cf2 another 
-\i0\b0 \cf2 job, and so on. Eventually, the first job finishes waiting and gets the 
+\i\b another 
+\i0\b0 job, and so on. Eventually, the first job finishes waiting and gets the 
 \fs24 CPU 
 \fs26\fsmilli13333 back. As long as at least one job needs to execute, the 
 \fs24 CPU 
@@ -570,10 +564,10 @@ An operating system provides the environment within which programs are executed.
 \fs26\fsmilli13333 may be interactive; that is, output goes to a display for the user, and input comes from a user keyboard, mouse, or other device. Since interactive 
 \fs24 I/O 
 \fs26\fsmilli13333 typically runs at 
-\f1 \cf2 \'93
-\f0 \cf2 people speeds,
-\f1 \cf2 \'94 
-\f0 \cf2 it may take a long time to complete. Input, for example, may be bounded by the user\'92s typing speed; seven characters per second is fast for people but incredibly slow for computers. Rather than let the 
+\f1 \'93
+\f0 people speeds,
+\f1 \'94 
+\f0 it may take a long time to complete. Input, for example, may be bounded by the user\'92s typing speed; seven characters per second is fast for people but incredibly slow for computers. Rather than let the 
 \fs24 CPU 
 \fs26\fsmilli13333 sit idle as this interactive input takes place, the operating system will rapidly switch the 
 \fs24 CPU 
@@ -584,7 +578,7 @@ An operating system provides the environment within which programs are executed.
 \b \cf3 job scheduling
 \b0 \cf2 , which we discuss in Chapter 6. When the operating system selects a job from the job pool, it loads that job into memory for execution. Having several programs in memory at the same time requires some form of memory management, which we cover in Chapters 8 and 9. In addition, if several jobs are ready to run at the same time, the system must choose which job will run first. Making this decision is 
 \b\fs24 \cf3 CPU 
-\fs26\fsmilli13333 \cf3 scheduling
+\fs26\fsmilli13333 scheduling
 \b0 \cf2 , which is also discussed in Chapter 6. Finally, running multiple jobs concurrently requires that their ability to affect one another be limited in all phases of the operating system, including process scheduling, disk storage, and memory management. We discuss these considerations throughout the text. 
 \f1\fs24 \cf4 \
 
@@ -623,10 +617,166 @@ As mentioned earlier, modern operating systems are
 
 \f0\fs26\fsmilli13333 \cf2 Without protection against these sorts of errors, either the computer must execute only one process at a time or all output must be suspect. A properly designed operating system must ensure that an incorrect (or malicious) program cannot cause other programs to execute incorrectly. 
 \f1\fs24 \cf4 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-\cf6 \
 
-\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.11: Computing Environments\
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Dual Mode:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+two separate 
+\i\b modes 
+\i0\b0 of operation: 
+\b \cf3 user mode 
+\b0 \cf2 and 
+\b \cf3 kernel mode 
+\b0 \cf2 (also called 
+\b \cf3 supervisor mode
+\b0 \cf2 , 
+\b \cf3 system mode
+\b0 \cf2 , or 
+\b \cf3 privileged mode
+\b0 \cf2 ). A bit, called the 
+\b \cf3 mode bit
+\b0 \cf2 , is added to the hardware of the computer to indicate the current mode: kernel (0) or user (1). With the mode bit, we can distinguish between a task that is executed on behalf of the operating system and one that is executed on behalf of the user. When the computer system is executing on behalf of a user application, the system is in user mode. However, when a user application requests a service from the operating system (via a system call), the system must transition from user to kernel mode to fulfill the request. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 At system boot time, the hardware starts in kernel mode. The operating system is then loaded and starts user applications in user mode. Whenever a trap or interrupt occurs, the hardware switches from user mode to kernel mode (that is, changes the state of the mode bit to 0). Thus, whenever the operating system gains control of the computer, it is in kernel mode. The system always switches to user mode (by setting the mode bit to 1) before passing control to a user program. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 means for protecting 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The hardware allows privileged instructions to be executed only in kernel mode. If an attempt is made to execute a privileged instruction in user mode, the hardware does not execute the instruction but rather treats it as illegal and traps it to the operating system. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The instruction to switch to kernel mode is an example of a privileged instruction. Some other examples include 
+\fs24 \cf2 I/O 
+\fs26\fsmilli13333 \cf2 control, timer management, and interrupt management. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f2\b\fs36 \cf5 \kerning1\expnd0\expndtw0 Timer:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+We must ensure that the operating system maintains control over the 
+\fs24 \cf2 CPU
+\fs26\fsmilli13333 \cf2 . We cannot allow a user program to get stuck in an infinite loop or to fail to call system services and never return control to the operating system. To accomplish this goal, we can use a 
+\b \cf3 timer
+\b0 \cf2 . A timer can be set to interrupt the computer after a specified period. The period may be fixed (for example, 1/60 second) or variable (for example, from 1 millisecond to 1 second). A 
+\b \cf3 variable timer 
+\b0 \cf2 is generally implemented by a fixed-rate clock and a counter. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 instructions that modify the content of the timer are privileged. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Before turning over control to the user, the operating system ensures that the timer is set to interrupt. If the timer interrupts, control transfers automatically to the operating system, which may treat the interrupt as a fatal error or may give the program more time. 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.6: Process Management \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+A program does nothing unless its instructions are executed by a 
+\fs24 \cf2 CPU
+\fs26\fsmilli13333 \cf2 . A program in execution, as mentioned, is a process. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A system task, such as sending output to a printer, can also be a process (or at least part of one). 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A process needs certain resources\'97including 
+\fs24 \cf2 CPU 
+\fs26\fsmilli13333 \cf2 time, memory, files, and 
+\fs24 \cf2 I/O 
+\fs26\fsmilli13333 \cf2 devices\'97to accomplish its task. These resources are either given to the process when it is created or allocated to it while it is running. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 When the process terminates, the operating system will reclaim any reusable resources. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 We emphasize that a program by itself is not a process. A program is a 
+\i\b passive 
+\i0\b0 entity, like the contents of a file stored on disk, whereas a process is an 
+\i\b active 
+\i0\b0 entity. A single-threaded process has one 
+\b \cf3 program counter 
+\b0 \cf2 specifying the next instruction to execute. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The execution of such a process must be sequential. The 
+\fs24 \cf2 CPU 
+\fs26\fsmilli13333 \cf2 executes one instruction of the process after another, until the process completes. Further, at any time, one instruction at most is executed on behalf of the process. Thus, although two processes may be associated with the same program, they are nevertheless considered two separate execution sequences. A multithreaded process has multiple program counters, each pointing to the next instruction to execute for a given thread. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 A process is the unit of work in a system. A system consists of a collection of processes, some of which are operating-system processes (those that execute system code) and the rest of which are user processes (those that execute user code). All these processes can potentially execute concurrently\'97by multiplexing on a single 
+\fs24 \cf2 CPU
+\fs26\fsmilli13333 \cf2 , for example. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The operating system is responsible for the following activities in connection with process management: 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f0\fs32 \cf3 \dn3 \'95 
+\fs26\fsmilli13333 \cf2 \up0 Scheduling processes and threads on the 
+\fs24 CPU
+\fs26\fsmilli13333 s\uc0\u8232 
+\fs32 \cf3 \dn3 \'95 
+\fs26\fsmilli13333 \cf2 \up0 Creating and deleting both user and system processes \
+
+\fs32 \cf3 \dn3 \'95 
+\fs26\fsmilli13333 \cf2 \up0 Suspending and resuming processes\uc0\u8232 
+\fs32 \cf3 \dn3 \'95 
+\fs26\fsmilli13333 \cf2 \up0 Providing mechanisms for process synchronization\uc0\u8232 
+\fs32 \cf3 \dn3 \'95 
+\fs26\fsmilli13333 \cf2 \up0 Providing mechanisms for process communication 
+\f1\fs24 \cf4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 1.7: Memory Management\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+Each byte has its own address. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Main memory is a repository of quickly accessible data shared by the 
+\fs24 \cf2 CPU 
+\fs26\fsmilli13333 \cf2 and 
+\fs24 \cf2 I/O 
+\fs26\fsmilli13333 \cf2 devices. The central processor reads instructions from main memory during the instruction-fetch cycle and both reads and writes data from main memory during the data-fetch cycle 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 main memory is generally the only large storage device that the 
+\fs24 \cf2 CPU 
+\fs26\fsmilli13333 \cf2 is able to address and access directly. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The operating system is responsible for the following activities in connection with memory management: 
+\f1\fs24 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
+\ls3\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Keeping track of which parts of memory are currently being used and who is using them 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
+\ls3\ilvl0
+\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 \up0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Deciding which processes (or parts of processes) and data to move into and out of memory 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\ls3\ilvl0
+\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 \up0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Allocating and deallocating memory space as needed 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\b\fs36 \cf6 \kerning1\expnd0\expndtw0 \up0  
+\f1\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs36 \kerning1\expnd0\expndtw0 1.11: Computing Environments\
 \pard\pardeftab720\sl300\sa240\partightenfactor0
 
 \f0\fs26\fsmilli13333 \cf3 \expnd0\expndtw0\kerning0
