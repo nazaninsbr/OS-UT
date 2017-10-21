@@ -1,0 +1,137 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Palatino-Roman;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red26\green23\blue24;\red0\green0\blue0;
+\red174\green0\blue240;\red19\green156\blue235;\red198\green50\blue253;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c0;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c0\c0;
+\csgenericrgb\c68235\c0\c94118;\cssrgb\c0\c67843\c93725;\csgenericrgb\c77647\c19608\c99216;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww14300\viewh10920\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf2 Designing the OS:\
+
+\b0 \cf0 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f1\fs26\fsmilli13333 \cf3 \expnd0\expndtw0\kerning0
+It is important that the goals of the system be well defined before the design begins. These goals form the basis for choices among various algorithms and strategies. 
+\f2\fs24 \cf4 \
+
+\f1\fs26\fsmilli13333 \cf3 We can view an operating system from several vantage points. One view focuses on the services that the system provides; another, on the interface that it makes available to users and programmers; a third, on its components and their interconnections. 
+\f2\fs24 \cf4 \
+
+\b \cf2 OS Services:
+\b0 \cf4 \
+
+\f1\fs26\fsmilli13333 \cf3 environment for the execution of programs. 
+\f2\fs24 \cf4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-10-21 at 8.28.58 AM.png \width10360 \height5360
+}¬}\
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f1\i\b\fs26\fsmilli13333 \cf5 \expnd0\expndtw0\kerning0
+functions that are helpful to the user. 
+\f2\i0\b0\fs24 \cf4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f1\b\fs26\fsmilli13333 \cf3 \expnd0\expndtw0\kerning0
+User interface
+\b0 \cf3 . Almost all operating systems have a 
+\b \cf6 user interface \cf3 (
+\fs24 \cf6 UI
+\fs26\fsmilli13333 \cf3 )
+\b0 \cf3 . This interface can take several forms. One is a 
+\b \cf6 command-line interface \cf3 (
+\fs24 \cf6 CLI
+\fs26\fsmilli13333 \cf3 )
+\b0 \cf3 , which uses text commands and a method for entering them (say, a keyboard for typing in commands in a specific format with specific options). Another is a 
+\b \cf6 batch interface
+\b0 \cf3 , in which commands and directives to control those commands are entered into files, and those files are executed. Most commonly, a 
+\b \cf6 graphical user interface \cf3 (
+\fs24 \cf6 GUI
+\fs26\fsmilli13333 \cf3 ) 
+\b0 \cf3 is used. 
+\f2\fs24 \cf4 \
+
+\f1\b\fs26\fsmilli13333 \cf3 Program execution
+\b0 \cf3 . The system must be able to load a program into memory and to run that program. The program must be able to end its execution, either normally or abnormally (indicating error). 
+\f2\fs24 \cf4 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f1\b \cf3 I/O 
+\fs26\fsmilli13333 operations
+\b0 . A running program may require 
+\fs24 I/O
+\fs26\fsmilli13333 , which may involve a file or an 
+\fs24 I/O 
+\fs26\fsmilli13333 device. For efficiency and protection, users usually cannot control 
+\fs24 I/O 
+\fs26\fsmilli13333 devices directly. 
+\f2\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f1\b\fs26\fsmilli13333 \cf3 File-system manipulation
+\b0 \cf3 . Programs need to create and delete files and directories by name, search for a given file, and list file information. Finally, some operating systems include permissions management to allow or deny access to files or directories based on file ownership. 
+\f2\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f1\b\fs26\fsmilli13333 \cf3 \dn3 Communications
+\b0 . There are many circumstances in which one process needs to exchange information with another process. Such communication may occur between processes that are executing on the same computer or between processes that are executing on different computer systems tied together by a computer network. Communications may be implemented via 
+\b \cf6 shared memory
+\b0 \cf3 , in which two or more processes read and write to a shared section of memory, or 
+\b \cf6 message passing
+\b0 \cf3 , in which packets of information in predefined formats are moved between processes by the operating system. 
+\fs32 \cf6 \up0 \uc0\u8232 
+\b\fs26\fsmilli13333 \cf3 \kerning1\expnd0\expndtw0 \
+\cf3 \expnd0\expndtw0\kerning0
+\dn3 Error detection
+\b0 .The OS needs to be detecting and correcting errors constantly. Errors may occur in the 
+\fs24 \cf3 \dn3 CPU 
+\fs26\fsmilli13333 \cf3 \dn3 and memory hardware (such as a memory error or a power failure), in 
+\fs24 \cf3 \dn3 I/O 
+\fs26\fsmilli13333 \cf3 \dn3 devices (such as a parity error on disk, a connection failure on a network, or lack of paper in the printer), and in the user program (such as an arithmetic overflow, an attempt to access an illegal memory location, or a too-great use of 
+\fs24 \cf3 \dn3 CPU 
+\fs26\fsmilli13333 \cf3 \dn3 time). Sometimes, it has no choice but to halt the system. At other times, it might terminate an error-causing process or return an error code to a process for the process to detect and possibly correct 
+\fs32 \cf6 \up0 \uc0\u8232 \dn3 \
+
+\i\b\fs26\fsmilli13333 \cf7 \up0 functions exists not for helping the user but rather for ensuring the efficient operation of the system itself. 
+\f2\i0\b0\fs24 \cf4 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
+\ls1\ilvl0
+\f1\b\fs26\fsmilli13333 \cf3 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Resource allocation
+\b0 . When there are multiple users or multiple jobs running at the same time, resources must be allocated to each of them. The operating system manages many different types of resources. Some (such as 
+\fs24 CPU 
+\fs26\fsmilli13333 cycles, main memory, and file storage) may have special allocation code, whereas others (such as 
+\fs24 I/O 
+\fs26\fsmilli13333 devices) may have much more general request and release code. For instance, in determining how best to use the 
+\fs24 CPU
+\fs26\fsmilli13333 , operating systems have 
+\fs24 CPU
+\fs26\fsmilli13333 -scheduling routines that take into account the speed of the 
+\fs24 CPU
+\fs26\fsmilli13333 , the jobs that must be executed, the number of registers available, and other factors. 
+\fs32 \cf6 \up0 \uc0\u8232 \dn3 \
+\ls1\ilvl0
+\b\fs26\fsmilli13333 \cf3 \kerning1\expnd0\expndtw0 \up0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Accounting
+\b0 . We want to keep track of which users use how much and what kinds of computer resources. This record keeping may be used for accounting (so that users can be billed) or simply for accumulating usage statistics. 
+\fs32 \cf6 \up0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
+\ls2\ilvl0
+\b\fs26\fsmilli13333 \cf3 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\dn3 Protection and security
+\b0 .The owners of information stored in a multi user or networked computer system may want to control use of that information. When several separate processes execute concurrently, it should not be possible for one process to interfere with the others or with the operating system itself. Protection involves ensuring that all access to system resources is controlled. Security of the system from outsiders is also important. Such security starts with requiring each user to authenticate \cf3 \up0 himself or herself to the system, usually by means of a password, to gain access to system resources. It extends to defending external 
+\fs24 \cf3 I/O 
+\fs26\fsmilli13333 \cf3 devices, including network adapters, from invalid access attempts and to recording all such connections for detection of break-ins. 
+\f2\fs24 \cf4 \
+}
