@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+A batch system executes 
+\b \cf3 jobs
+\b0 \cf2 , whereas a time-shared system has 
+\b \cf3 user programs
+\b0 \cf2 , or 
+\b \cf3 tasks
+\b0 \cf2 . 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The terms 
+\i\b \cf2 job 
+\i0\b0 \cf2 and 
+\i\b \cf2 process 
+\i0\b0 \cf2 are used almost interchangeably in this text. Although we personally prefer the term 
+\i\b \cf2 process
+\i0\b0 \cf2 , much of operating-system theory and terminology was developed during a time when the major activity of operating systems was job processing. It would be misleading to avoid the use of commonly accepted terms that include the word 
+\i\b \cf2 job 
+\i0\b0 \cf2 (such as 
+\i\b \cf2 job scheduling
+\i0\b0 \cf2 ) simply because 
+\i\b \cf2 process 
+\i0\b0 \cf2 has superseded 
+\i\b \cf2 job. 
+\f1\i0\b0\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 as mentioned earlier, a process is a program in execution. A process is more than the program code, which is sometimes known as the 
+\b \cf3 text section
+\b0 \cf2 . It also includes the current activity, as represented by the value of the 
+\b \cf3 program counter 
+\b0 \cf2 and the contents of the processor\'92s registers. A process generally also includes the process 
+\b \cf3 stack
+\b0 \cf2 , which contains temporary data (such as function parameters, return addresses, and local variables), and a 
+\b \cf3 data section
+\b0 \cf2 , which contains global variables. A process may also include a 
+\b \cf3 heap
+\b0 \cf2 , which is memory that is dynamically allocated during process run time. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 We emphasize that a program by itself is not a process. A program is a 
+\i\b \cf2 passive 
+\i0\b0 \cf2 entity, such as a file containing a list of instructions stored on disk (often called an 
+\b \cf3 executable file
+\b0 \cf2 ). In contrast, a process is an 
+\i\b \cf2 active 
+\i0\b0 \cf2 entity, with a program counter specifying the next instruction to execute and a set of associated resources. A program becomes a process when an executable file is loaded into memory. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 As a process executes, it changes 
+\b \cf3 state
+\b0 \cf2 . The state of a process is defined in part by the current activity of that process. A process may be in one of the following states: 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+
+\f0\fs32 \cf3 \dn3 \'95 
+\b\fs26\fsmilli13333 \cf2 \up0 New
+\b0 .The process is being created. 
+\f1\fs24 \cf4 \
+
+\f0\fs32 \cf3 \dn3 \'95 
+\b\fs26\fsmilli13333 \cf2 \up0 Running
+\b0 . Instructions are being executed. 
+\f1\fs24 \cf4 \
+
+\f0\fs32 \cf3 \dn3 \'95 
+\b\fs26\fsmilli13333 \cf2 \up0 Waiting
+\b0 . The process is waiting for some event to occur (such as an 
+\fs24 I/O 
+\fs26\fsmilli13333 completion or reception of a signal). 
+\f1\fs24 \cf4 \
+
+\f0\fs32 \cf3 \dn3 \'95 
+\b\fs26\fsmilli13333 \cf2 \up0 Ready
+\b0 . The process is waiting to be assigned to a processor. \
+
+\fs32 \cf3 \dn3 \'95 
+\b\fs26\fsmilli13333 \cf2 \up0 Terminated
+\b0 . The process has finished execution. \
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf2 Each process is represented in the operating system by a 
+\b \cf3 process control block \cf2 (
+\fs24 \cf3 PCB
+\fs26\fsmilli13333 \cf2 ) 
+\b0 \cf2 \'97 also called a 
+\b \cf3 task control block
+\b0 \cf2 . }
