@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+\f3\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid1\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+even simple programs may make heavy use of the operating system. Frequently, systems execute thousands of system calls per second. Most programmers never see this level of detail, however. Typically, application developers design programs according to an 
+\b \cf3 application programming interface \cf2 (
+\fs24 \cf3 API
+\fs26\fsmilli13333 \cf2 )
+\b0 . The 
+\fs24 API 
+\fs26\fsmilli13333 specifies a set of functions that are available to an application programmer, including the parameters that are passed to each function and the return values the programmer can expect. Three of the most common 
+\fs24 API
+\fs26\fsmilli13333 s available to application programmers are the Windows 
+\fs24 API 
+\fs26\fsmilli13333 for Windows systems, the 
+\fs24 POSIX API 
+\fs26\fsmilli13333 for 
+\fs24 POSIX
+\fs26\fsmilli13333 -based systems (which include virtually all versions of 
+\fs24 UNIX
+\fs26\fsmilli13333 , Linux, and Mac 
+\fs24 OS X
+\fs26\fsmilli13333 ), and the Java 
+\fs24 API 
+\fs26\fsmilli13333 for programs that run on the Java virtual machine. A programmer accesses an 
+\fs24 API 
+\fs26\fsmilli13333 via a library of code provided by the operating system. In the case of 
+\fs24 UNIX 
+\fs26\fsmilli13333 and Linux for programs written in the C language, the library is called 
+\b \cf3 libc
+\b0 \cf2 . Note that\'97unless specified\'97the system-call names used throughout this text are generic examples. Each operating system has its own name for each system call. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Behind the scenes, the functions that make up an 
+\fs24 API 
+\fs26\fsmilli13333 typically invoke the actual system calls on behalf of the application programmer. For example, the Windows function 
+\f1\fs29\fsmilli14667 CreateProcess() 
+\f0\fs26\fsmilli13333 (which unsurprisingly is used to create a new process) actually invokes the 
+\fs24 NT
+\f1\fs29\fsmilli14667 CreateProcess() 
+\f0\fs26\fsmilli13333 system call in the Windows kernel. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Why would an application programmer prefer programming according to an 
+\fs24 API 
+\fs26\fsmilli13333 rather than invoking actual system calls? There are several reasons for doing so. One benefit concerns program portability. 
+\f1\fs24 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Furthermore, actual system calls can often be more detailed and difficult to work with than the 
+\fs24 API 
+\fs26\fsmilli13333 available to an application programmer. Nevertheless, there often exists a strong correlation between a function in the 
+\fs24 API 
+\fs26\fsmilli13333 and its associated system call within the kernel. In fact, many of the 
+\fs24 POSIX 
+\fs26\fsmilli13333 and Windows 
+\fs24 API
+\fs26\fsmilli13333 s are similar to the native system calls provided by the 
+\fs24 UNIX
+\fs26\fsmilli13333 , Linux, and Windows operating systems. 
+\f1\fs24 \cf4 \uc0\u8232 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+As an example of a standard 
+\fs24 API
+\fs26\fsmilli13333 , consider the 
+\f1\fs29\fsmilli14667 read() 
+\f0\fs26\fsmilli13333 function that is available in 
+\fs24 UNIX 
+\fs26\fsmilli13333 and Linux systems. The 
+\fs24 API 
+\fs26\fsmilli13333 for this function is obtained from the 
+\f1\fs29\fsmilli14667 man 
+\f0\fs26\fsmilli13333 page by invoking the command 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+\ls1\ilvl0
+\fs29\fsmilli14667 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+man read 
+\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+on the command line. A description of this 
+\fs24 API 
+\fs26\fsmilli13333 appears below: 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl340\partightenfactor0
+\ls1\ilvl0
+\f2\fs29\fsmilli14667 \cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+           #include <unistd.h>\
+\pard\pardeftab720\sl280\partightenfactor0
+\ls1\ilvl0
+\f1\fs24 \cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+{{\NeXTGraphic page88image4352.png \width20 \height40
+}¬} {{\NeXTGraphic page88image4520.png \width6380 \height1600
+}¬}\
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+\ls1\ilvl0
+\f2\fs29\fsmilli14667 \cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+ssize_t 
+\f1\fs24 \
+\ls1\ilvl0
+\f3\fs29\fsmilli14667 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+return value 
+\f1\fs24 \
+\pard\pardeftab720\sl340\partightenfactor0
+\ls1\ilvl0
+\f2\fs29\fsmilli14667 \cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+ read(int fd, void *buf, size_t count)\
+\pard\pardeftab720\sl340\sa240\partightenfactor0
+\ls1\ilvl0
+\f3 \cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+function parameters name 
+\f1\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\ls1\ilvl0\cf4 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+{{\NeXTGraphic page88image6520.png \width1223 \height236
+}¬} {{\NeXTGraphic page88image6680.png \width622 \height233
+}¬} {{\NeXTGraphic page88image6840.png \width3886 \height236
+}¬}\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+A program that uses the 
+\f1\fs29\fsmilli14667 read() 
+\f0\fs26\fsmilli13333 function must include the 
+\f1\fs29\fsmilli14667 unistd.h 
+\f0\fs26\fsmilli13333 header file, as this file defines the 
+\f1\fs29\fsmilli14667 ssize t 
+\f0\fs26\fsmilli13333 and 
+\f1\fs29\fsmilli14667 size t 
+\f0\fs26\fsmilli13333 data types (among other things). The parameters passed to 
+\f1\fs29\fsmilli14667 read() 
+\f0\fs26\fsmilli13333 are as follows: 
+\f1\fs24 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340\sa320\partightenfactor0
+\ls1\ilvl0
+\fs29\fsmilli14667 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\dn3 int fd
+\f0\fs26\fsmilli13333 \'97the file descriptor to be read 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\ls1\ilvl0
+\f1\fs29\fsmilli14667 \cf2 \kerning1\expnd0\expndtw0 \up0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\dn3 void *buf
+\f0\fs26\fsmilli13333 \'97a buffer where the data will be read into 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\ls1\ilvl0
+\f1\fs29\fsmilli14667 \cf2 \kerning1\expnd0\expndtw0 \up0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\dn3 size t count
+\f0\fs26\fsmilli13333 \'97the maximum number of bytes to b 
+\fs32 \cf3 \up0 \uc0\u8232 \dn3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\fs24 \cf4 \kerning1\expnd0\expndtw0 \up0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\
+}

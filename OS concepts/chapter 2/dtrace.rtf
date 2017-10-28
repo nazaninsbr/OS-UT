@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red19\green156\blue235;\red26\green23\blue24;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c67843\c93725;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c0\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+DT
+\fs26\fsmilli13333 race 
+\b0 \cf3 is a facility that dynamically adds probes to a running system, both in user processes and in the kernel. These probes can be queried via the 
+\f1\fs29\fsmilli14667 D 
+\f0\fs26\fsmilli13333 programming language to determine an astonishing amount about the kernel, the system state, and process activities. For example, Figure 2.20 follows an application as it executes a system call (
+\f1\fs29\fsmilli14667 ioctl()
+\f0\fs26\fsmilli13333 ) and shows the functional calls within the kernel as they execute to perform the system call. Lines ending with 
+\f1 \'93
+\f0 U
+\f1 \'94 
+\f0 are executed in user mode, and lines ending in 
+\f1 \'93
+\f0 K
+\f1 \'94 
+\f0 in kernel mode. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf3 Debugging the interactions between user-level and kernel code is nearly impossible without a toolset that understands both sets of code and can instrument the interactions. For that toolset to be truly useful, it must be able to debug any area of a system, including areas that were not written with debugging in mind, and do so without affecting system reliability. This tool must also have a minimum performance impact\'97ideally it should have no impact when not in use and a proportional impact during use. The 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race tool meets these requirements and provides a dynamic, safe, low-impact debugging environment. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf3 Until the 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race framework and tools became available with Solaris 10, kernel debugging was usually shrouded in mystery and accomplished via happenstance and archaic code and tools. For example, 
+\fs24 \cf3 CPU
+\fs26\fsmilli13333 \cf3 s have a breakpoint feature that will halt execution and allow a debugger to examine the state of the system. Then execution can continue until the next breakpoint or termination. This method cannot be used in a multiuser operating-system kernel without negatively affecting all of the users on the system. 
+\b \cf2 Profiling
+\b0 \cf3 , which periodically samples the instruction pointer to determine which code is being executed, can show statistical trends but not individual activities. Code can be included in the kernel to emit specific data under specific circumstances, but that code slows down the kernel and tends not to be included in the part of the kernel where the specific problem being debugged is occurring. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf3 In contrast, 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race runs on production systems \'97 systems that are running important or critical applications\'97and causes no harm to the system. It slows activities while enabled, but after execution it resets the system to its pre-debugging state. It is also a broad and deep tool. It can broadly debug everything happening in the system (both at the user and kernel levels and between the user and kernel layers). It can also delve deep into code, showing individual 
+\fs24 \cf3 CPU 
+\fs26\fsmilli13333 \cf3 instructions or kernel subroutine activities. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f0 \cf3 DT
+\fs26\fsmilli13333 \cf3 race is composed of a compiler, a framework, 
+\b \cf2 providers 
+\b0 \cf3 of 
+\b \cf2 probes 
+\b0 \cf3 written within that framework, and 
+\b \cf2 consumers 
+\b0 \cf3 of those probes. 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race providers create probes. Kernel structures exist to keep track of all probes that the providers have created. The probes are stored in a hash-table data structure that is hashed by name and indexed according to unique probe identifiers. When a probe is enabled, a bit of code in the area to be probed is rewritten to call 
+\f1\fs29\fsmilli14667 dtrace probe(probe identifier) 
+\f0\fs26\fsmilli13333 and then continue with the code\'92s original operation. Different providers create different kinds of probes. For example, a kernel system-call probe works differently from a user-process probe, and that is different from an 
+\fs24 \cf3 I/O 
+\fs26\fsmilli13333 \cf3 probe. 
+\f1\fs24 \cf4 \
+
+\f0 \cf3 DT
+\fs26\fsmilli13333 \cf3 race features a compiler that generates a byte code that is run in the kernel. This code is assured to be 
+\f1 \'93
+\f0 safe
+\f1 \'94 
+\f0 by the compiler. For example, no loops are allowed, and only specific kernel state modifications are allowed when specifically requested. Only users with 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race 
+\f1 \'93
+\f0 privileges
+\f1 \'94 
+\f0 (or 
+\f1 \'93
+\f0 root
+\f1 \'94 
+\f0 users) are allowed to use 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race, as it can retrieve private kernel data (and modify data if requested). The generated code runs in the kernel and enables probes. It also enables consumers in user mode and enables communications between the two. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf3 A 
+\fs24 \cf3 DT
+\fs26\fsmilli13333 \cf3 race consumer is code that is interested in a probe and its results. A consumer requests that the provider create one or more probes. When a probe fires, it emits data that are managed by the kernel. Within the kernel, actions called 
+\b \cf2 enabling control blocks
+\b0 \cf3 , or 
+\fs24 \cf3 ECB
+\fs26\fsmilli13333 \cf3 s, are performed when probes fire. One probe can cause multiple 
+\fs24 \cf3 ECB
+\fs26\fsmilli13333 \cf3 s to execute if more than one consumer is interested in that probe. Each 
+\fs24 \cf3 ECB 
+\fs26\fsmilli13333 \cf3 contains a predicate (
+\f1 \cf3 \'93
+\f0 \cf3 if statement
+\f1 \cf3 \'94
+\f0 \cf3 ) that can filter out that 
+\fs24 \cf3 ECB
+\fs26\fsmilli13333 \cf3 . Otherwise, the list of actions in the 
+\fs24 \cf3 ECB 
+\fs26\fsmilli13333 \cf3 is executed. The most common action is to capture some bit of data, such as a variable\'92s value at that point of the probe execution. By gathering such data, a complete picture of a user or kernel action can be built. Further, probes firing from both user space and the kernel can show how a user-level action caused kernel-level reactions. Such data are invaluable for performance monitoring and code optimization. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf3 Once the probe consumer terminates, its 
+\fs24 \cf3 ECB
+\fs26\fsmilli13333 \cf3 s are removed. If there are no 
+\fs24 \cf3 ECB
+\fs26\fsmilli13333 \cf3 s consuming a probe, the probe is removed. That involves rewriting the code to remove the 
+\f1\fs29\fsmilli14667 \cf3 dtrace probe() 
+\f0\fs26\fsmilli13333 \cf3 call and put back the original code. Thus, before a probe is created and after it is destroyed, the system is exactly the same, as if no probing occurred. 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f0 \cf3 DT
+\fs26\fsmilli13333 \cf3 race takes care to assure that probes do not use too much memory or 
+\fs24 \cf3 CPU 
+\fs26\fsmilli13333 \cf3 capacity, which could harm the running system. The buffers used to hold the probe results are monitored for exceeding default and maximum limits. 
+\fs24 \cf3 CPU 
+\fs26\fsmilli13333 \cf3 time for probe execution is monitored as well. If limits are exceeded, the consumer is terminated, along with the offending probes. Buffers are allocated per 
+\fs24 \cf3 CPU 
+\fs26\fsmilli13333 \cf3 to avoid contention and data loss 
+\f1\fs24 \cf4 .\
+}

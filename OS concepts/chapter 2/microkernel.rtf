@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+We have already seen that as 
+\fs24 \cf2 UNIX 
+\fs26\fsmilli13333 \cf2 expanded, the kernel became large and difficult to manage. In the mid-1980s, researchers at Carnegie Mellon University developed an operating system called 
+\b \cf3 Mach 
+\b0 \cf2 that modularized the kernel using the 
+\b \cf3 microkernel 
+\b0 \cf2 approach. This method structures the operating system by removing all nonessential components from the kernel and implementing them as system and user-level programs. The result is a smaller kernel. There is little consensus regarding which services should remain in the kernel and which should be implemented in user space. Typically, however, microkernels provide minimal process and memory management, in addition to a communication facility. Figure 2.14 illustrates the architecture of a typical microkernel. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The main function of the microkernel is to provide communication between the client program and the various services that are also running in user space. Communication is provided through 
+\b \cf3 message passing, 
+\b0 \cf2 which was described in Section 2.4.5. For example, if the client program wishes to access a file, it must interact with the file server. The client program and service never interact directly. Rather, they communicate indirectly by exchanging messages with the microkernel. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 One benefit of the microkernel approach is that it makes extending the operating system easier. All new services are added to user space and consequently do not require modification of the kernel. When the kernel does have to be modified, the changes tend to be fewer, because the microkernel is a smaller kernel. The resulting operating system is easier to port from one hardware design to another. The microkernel also provides more security and reliability, since most services are running as user\'97rather than kernel\'97 processes. If a service fails, the rest of the operating system remains untouched. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Some contemporary operating systems have used the microkernel approach. Tru64 
+\fs24 \cf2 UNIX 
+\fs26\fsmilli13333 \cf2 (formerly Digital 
+\fs24 \cf2 UNIX
+\fs26\fsmilli13333 \cf2 ) provides a 
+\fs24 \cf2 UNIX 
+\fs26\fsmilli13333 \cf2 interface to the user, but it is implemented with a Mach kernel. The Mach kernel maps 
+\fs24 \cf2 UNIX 
+\fs26\fsmilli13333 \cf2 system calls into messages to the appropriate user-level services. The Mac 
+\fs24 \cf2 OS X 
+\fs26\fsmilli13333 \cf2 kernel (also known as 
+\b \cf3 Darwin
+\b0 \cf2 ) is also partly based on the Mach microkernel. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Another example is 
+\fs24 \cf2 QNX
+\fs26\fsmilli13333 \cf2 , a real-time operating system for embedded systems. The 
+\fs24 \cf2 QNX 
+\fs26\fsmilli13333 \cf2 Neutrino microkernel provides services for message passing and process scheduling. It also handles low-level network communication and hardware interrupts. All other services in 
+\fs24 \cf2 QNX 
+\fs26\fsmilli13333 \cf2 are provided by standard processes that run outside the kernel in user mode. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Unfortunately, the performance of microkernels can suffer due to increased system-function overhead. Consider the history of Windows 
+\fs24 \cf2 NT
+\fs26\fsmilli13333 \cf2 . The first release had a layered microkernel organization. This version\'92s performance was low compared with that of Windows 95. Windows 
+\fs24 \cf2 NT 
+\fs26\fsmilli13333 \cf2 4.0 partially corrected the performance problem by moving layers from user space to kernel space and integrating them more closely. By the time Windows 
+\fs24 \cf2 XP 
+\fs26\fsmilli13333 \cf2 was designed, Windows architecture had become more monolithic than microkernel. 
+\f1\fs24 \cf4 \
+}

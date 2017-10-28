@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+There are two common models of interprocess communication: the message- passing model and the shared-memory model. In the 
+\b \cf3 message-passing model
+\b0 \cf2 , the communicating processes exchange messages with one another to transfer information. Messages can be exchanged between the processes either directly or indirectly through a common mailbox. Before communication can take place, a connection must be opened. The name of the other communicator must be known, be it another process on the same system or a process on another computer connected by a communications network. Each computer in a network has a 
+\b \cf3 host name 
+\b0 \cf2 by which it is commonly known. A host also has a network identifier, such as an 
+\fs24 \cf2 IP 
+\fs26\fsmilli13333 \cf2 address. Similarly, each process has a 
+\b \cf3 process name
+\b0 \cf2 , and this name is translated into an identifier by which the operating system can refer to the process. The 
+\f1\fs29\fsmilli14667 \cf2 get hostid() 
+\f0\fs26\fsmilli13333 \cf2 and 
+\f1\fs29\fsmilli14667 \cf2 get processid() 
+\f0\fs26\fsmilli13333 \cf2 system calls do this translation. The identifiers are then passed to the general- purpose 
+\f1\fs29\fsmilli14667 \cf2 open() 
+\f0\fs26\fsmilli13333 \cf2 and 
+\f1\fs29\fsmilli14667 \cf2 close() 
+\f0\fs26\fsmilli13333 \cf2 calls provided by the file system or to specific 
+\f1\fs29\fsmilli14667 \cf2 open connection() 
+\f0\fs26\fsmilli13333 \cf2 and 
+\f1\fs29\fsmilli14667 \cf2 close connection() 
+\f0\fs26\fsmilli13333 \cf2 system calls, depending on the system\'92s model of communication. The recipient process usually must give its permission for communication to take place with an 
+\f1\fs29\fsmilli14667 \cf2 accept connection() 
+\f0\fs26\fsmilli13333 \cf2 call. Most processes that will be receiving connections are special-purpose 
+\b \cf3 daemons
+\b0 \cf2 , which are system programs provided for that purpose. They execute a 
+\f1\fs29\fsmilli14667 \cf2 wait for connection() 
+\f0\fs26\fsmilli13333 \cf2 call and are awakened when a connection is made. The source of the communication, known as the 
+\b \cf3 client
+\b0 \cf2 , and the receiving daemon, known as a 
+\b \cf3 server, 
+\b0 \cf2 then exchange messages by using 
+\f1\fs29\fsmilli14667 \cf2 read message() 
+\f0\fs26\fsmilli13333 \cf2 and 
+\f1\fs29\fsmilli14667 \cf2 write message() 
+\f0\fs26\fsmilli13333 \cf2 system calls. The 
+\f1\fs29\fsmilli14667 \cf2 close connection() 
+\f0\fs26\fsmilli13333 \cf2 call terminates the communication. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 In the 
+\b \cf3 shared-memory model
+\b0 \cf2 , processes use 
+\f1\fs29\fsmilli14667 \cf2 shared memory create() 
+\f0\fs26\fsmilli13333 \cf2 and 
+\f1\fs29\fsmilli14667 \cf2 shared memory attach() 
+\f0\fs26\fsmilli13333 \cf2 system calls to create and gain access to regions of memory owned by other processes. Recall that, normally, the operating system tries to prevent one process from accessing another process\'92s memory. Shared memory requires that two or more processes agree to remove this restriction. They can then exchange information by reading and writing data in the shared areas. The form of the data is determined by the processes and is not under the operating system\'92s control. The processes are also responsible for ensuring that they are not writing to the same location simultaneously. Such mechanisms are discussed in Chapter 5. In Chapter 4, we look at a variation of the process scheme\'97threads\'97in which memory is shared by default. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Both of the models just discussed are common in operating systems, and most systems implement both. Message passing is useful for exchanging smaller amounts of data, because no conflicts need be avoided. It is also easier to implement than is shared memory for inter computer communication. Shared memory allows maximum speed and convenience of communication, since it can be done at memory transfer speeds when it takes place within a computer. Problems exist, however, in the areas of protection and synchronization between the processes sharing memory. 
+\f1\fs24 \cf4 \
+}
