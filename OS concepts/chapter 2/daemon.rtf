@@ -1,47 +1,48 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
 {\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
-}
-{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
-}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red255\green128\blue0;\red0\green0\blue0;
+\red19\green156\blue235;}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\csgenericrgb\c100000\c50000\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c0\c67843\c93725;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\margl1440\margr1440\vieww15080\viewh11400\viewkind0
 \deftab720
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
 \ls1\ilvl0
 \f0\fs26\fsmilli13333 \cf2 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-\dn3 All general-purpose systems have methods for launching certain system-program processes at boot time. Some of these processes terminate after completing their tasks, while others continue to run until the system is halted. Constantly running system-program processes are known as 
-\b \cf3 services
-\b0 \cf2 , 
-\b \cf3 subsystems
-\b0 \cf2 , or daemons. One example is the network daemon discussed in Section 2.4.5. In that example, a system needed a service to listen for network connections in order to connect those requests to the correct processes. Other examples include process schedulers that start processes according to a specified schedule, system error monitoring services, and print servers. Typical systems have dozens \cf2 \up0 of daemons. In addition, operating systems that run important activities in user context rather than in kernel context may use daemons to run these activities. 
+\dn3 All general-purpose systems have methods for launching certain system-program processes at boot time. Some of these processes terminate after completing their tasks, while others continue to run until the system is halted.\cf3  Constantly running system-program processes are known as 
+\b services
+\b0 , 
+\b subsystems
+\b0 , or daemons.\cf2  One example is the network daemon discussed in Section 2.4.5. In that example, a system needed a service to listen for network connections in order to connect those requests to the correct processes. Other examples include process schedulers that start processes according to a specified schedule, system error monitoring services, and print servers. Typical systems have dozens \up0 of daemons. In addition, operating systems that run important activities in user context rather than in kernel context may use daemons to run these activities. 
 \f1\fs24 \cf4 \
 \pard\pardeftab720\sl300\sa240\partightenfactor0
 \ls1\ilvl0
 \f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
 Along with system programs, most operating systems are supplied with programs that are useful in solving common problems or performing common operations. Such 
-\b \cf3 application programs 
+\b \cf5 application programs 
 \b0 \cf2 include Web browsers, word processors and text formatters, spreadsheets, database systems, compilers, plotting and statistical-analysis packages, and games. 
 \f1\fs24 \cf4 \
 \ls1\ilvl0
 \f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
 The view of the operating system seen by most users is defined by the application and system programs, rather than by the actual system calls. Consider a user\'92s 
-\fs24 \cf2 PC
-\fs26\fsmilli13333 \cf2 . When a user\'92s computer is running the Mac 
-\fs24 \cf2 OS X 
-\fs26\fsmilli13333 \cf2 operating system, the user might see the 
-\fs24 \cf2 GUI
-\fs26\fsmilli13333 \cf2 , featuring a mouse-and-windows interface. Alternatively, or even in one of the windows, the user might have a command-line 
-\fs24 \cf2 UNIX 
-\fs26\fsmilli13333 \cf2 shell. Both use the same set of system calls, but the system calls look different and act in different ways. Further confusing the user view, consider the user dual-booting from Mac 
-\fs24 \cf2 OS X 
-\fs26\fsmilli13333 \cf2 into Windows. Now the same user on the same hardware has two entirely different interfaces and two sets of applications using the same physical resources. On the same hardware, then, a user can be exposed to multiple user interfaces sequentially or concurrently. 
+\fs24 PC
+\fs26\fsmilli13333 . When a user\'92s computer is running the Mac 
+\fs24 OS X 
+\fs26\fsmilli13333 operating system, the user might see the 
+\fs24 GUI
+\fs26\fsmilli13333 , featuring a mouse-and-windows interface. Alternatively, or even in one of the windows, the user might have a command-line 
+\fs24 UNIX 
+\fs26\fsmilli13333 shell. Both use the same set of system calls, but the system calls look different and act in different ways. Further confusing the user view, consider the user dual-booting from Mac 
+\fs24 OS X 
+\fs26\fsmilli13333 into Windows. Now the same user on the same hardware has two entirely different interfaces and two sets of applications using the same physical resources. On the same hardware, then, a user can be exposed to multiple user interfaces sequentially or concurrently. 
 \f1\fs24 \cf4 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
 \ls1\ilvl0
-\f0\fs32 \cf3 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\
+\f0\fs32 \cf5 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\
 {\listtext	\'95	}\
-\ls1\ilvl0\expnd0\expndtw0\kerning0
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa320\partightenfactor0
+\ls1\ilvl0\cf5 \expnd0\expndtw0\kerning0
 \uc0\u8232 \dn3 \
 }

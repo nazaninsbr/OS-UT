@@ -8,40 +8,30 @@
 \deftab720
 \pard\pardeftab720\sl300\sa240\partightenfactor0
 
-\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+\f0\fs36 \cf2 \expnd0\expndtw0\kerning0
 One important principle is the separation of 
 \b \cf3 policy 
 \b0 \cf2 from 
 \b \cf3 mechanism
-\b0 \cf2 . Mecha- nisms determine 
-\i\b \cf2 how 
-\i0\b0 \cf2 to do something; policies determine 
-\i\b \cf2 what 
-\i0\b0 \cf2 will be done. For example, the timer construct (see Section 1.5.2) is a mechanism for ensuring 
-\fs24 \cf2 CPU 
-\fs26\fsmilli13333 \cf2 protection, but deciding how long the timer is to be set for a particular user is a policy decision. 
-\f1\fs24 \cf4 \
+\b0 \cf2 . Mechanisms determine 
+\i\b how 
+\i0\b0 to do something; policies determine 
+\i\b what 
+\i0\b0 will be done. For example, the timer construct (see Section 1.5.2) is a mechanism for ensuring CPU protection, but deciding how long the timer is to be set for a particular user is a policy decision. 
+\f1 \cf4 \
 
-\f0\fs26\fsmilli13333 \cf2 The separation of policy and mechanism is important for flexibility. Policies are likely to change across places or over time. In the worst case, each change in policy would require a change in the underlying mechanism. A general mechanism insensitive to changes in policy would be more desirable. A change in policy would then require redefinition of only certain parameters of the system. For instance, consider a mechanism for giving priority to certain types of programs over others. If the mechanism is properly separated from policy, it can be used either to support a policy decision that 
-\fs24 \cf2 I/O
-\fs26\fsmilli13333 \cf2 -intensive programs should have priority over 
-\fs24 \cf2 CPU
-\fs26\fsmilli13333 \cf2 -intensive ones or to support the opposite policy. 
-\f1\fs24 \cf4 \
+\f0 \cf2 The separation of policy and mechanism is important for flexibility. Policies are likely to change across places or over time. In the worst case, each change in policy would require a change in the underlying mechanism. A general mechanism insensitive to changes in policy would be more desirable. A change in policy would then require redefinition of only certain parameters of the system. For instance, consider a mechanism for giving priority to certain types of programs over others. If the mechanism is properly separated from policy, it can be used either to support a policy decision that I/O-intensive programs should have priority over CPU-intensive ones or to support the opposite policy. 
+\f1 \cf4 \
 
-\f0\fs26\fsmilli13333 \cf2 Microkernel-based operating systems (Section 2.7.3) take the separation of mechanism and policy to one extreme by implementing a basic set of primitive building blocks. These blocks are almost policy free, allowing more advanced mechanisms and policies to be added via user-created kernel modules or user programs themselves. As an example, consider the history of 
-\fs24 \cf2 UNIX
-\fs26\fsmilli13333 \cf2 . At first, it had a time-sharing scheduler. In the latest version of Solaris, scheduling is controlled by loadable tables. Depending on the table currently loaded, the system can be time sharing, batch processing, real time, fair share, or any combination. Making the scheduling mechanism general purpose allows vast policy changes to be made with a single 
-\f1\fs29\fsmilli14667 \cf2 load-new-table 
-\f0\fs26\fsmilli13333 \cf2 command. At the other extreme is a system such as Windows, in which both mechanism and policy are encoded in the system to enforce a global look and feel. All applications have similar interfaces, because the interface itself is built into the kernel and system libraries. The Mac 
-\fs24 \cf2 OS X 
-\fs26\fsmilli13333 \cf2 operating system has similar functionality. 
-\f1\fs24 \cf4 \
+\f0 \cf2 Microkernel-based operating systems (Section 2.7.3) take the separation of mechanism and policy to one extreme by implementing a basic set of primitive building blocks. These blocks are almost policy free, allowing more advanced mechanisms and policies to be added via user-created kernel modules or user programs themselves. As an example, consider the history of UNIX. At first, it had a time-sharing scheduler. In the latest version of Solaris, scheduling is controlled by loadable tables. Depending on the table currently loaded, the system can be time sharing, batch processing, real time, fair share, or any combination. Making the scheduling mechanism general purpose allows vast policy changes to be made with a single 
+\f1 load-new-table 
+\f0 command. At the other extreme is a system such as Windows, in which both mechanism and policy are encoded in the system to enforce a global look and feel. All applications have similar interfaces, because the interface itself is built into the kernel and system libraries. The Mac OS X operating system has similar functionality. 
+\f1 \cf4 \
 
-\f0\fs26\fsmilli13333 \cf2 Policy decisions are important for all resource allocation. Whenever it is necessary to decide whether or not to allocate a resource, a policy decision must be made. Whenever the question is 
-\i\b \cf2 how 
-\i0\b0 \cf2 rather than 
-\i\b \cf2 what
-\i0\b0 \cf2 , it is a mechanism that must be determined. 
-\f1\fs24 \cf4 \
+\f0 \cf2 Policy decisions are important for all resource allocation. Whenever it is necessary to decide whether or not to allocate a resource, a policy decision must be made. Whenever the question is 
+\i\b how 
+\i0\b0 rather than 
+\i\b what
+\i0\b0 , it is a mechanism that must be determined. 
+\f1 \cf4 \
 }
