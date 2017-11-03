@@ -1,0 +1,9 @@
+change back into the linux-3.16 folder and open Makefile
+
+gedit Makefile
+
+goto line number 842 which says :- “core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ “
+
+change this to   “core-y += kernel/ mm/ fs/ ipc/ security/ crypto/ block/ hello/“
+
+This is to tell the compiler that the source files of our new system call (sys_hello()) are in present in the hello directory.

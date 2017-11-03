@@ -1,5 +1,6 @@
 #include <linux/kernel.h>
 
-void hello_world(){
+asmlinkage long sys_hello(void){
 	printk("Hello World!\n");
+	return 0;
 }

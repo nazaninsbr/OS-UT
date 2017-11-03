@@ -1,0 +1,11 @@
+If your system is a 64 bit system you will need to alter the syscall_64.tbl file.
+
+cd arch/x86/syscalls
+
+gedit syscall_32.tbl
+
+add the following line in the end of the file :-
+
+354    i386    hello    sys_hello
+
+354 – It is the number of the system call . It should be one plus the number of the last system call. (it was 354 in my system). This has to be noted down to make the system call in the userspace program.

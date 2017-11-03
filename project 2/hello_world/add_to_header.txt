@@ -1,0 +1,9 @@
+cd  include/linux/
+
+gedit syscalls.h
+
+add the following line to the end of the file just before the #endif  statement at the very bottom.
+
+asmlinkage long sys_hello(void);
+
+This defines the prototype of the function of our system call. “asmlinkage” is a key word used to indicate that all parameters of the function would be available on the stack.
