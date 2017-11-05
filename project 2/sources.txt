@@ -1,0 +1,9 @@
+https://arvindsraj.wordpress.com/2012/10/05/adding-hello-world-system-call-to-linux/
+
+https://www.csee.umbc.edu/courses/undergraduate/CMSC421/fall02/burt/projects/howto_add_systemcall.html
+
+https://tssurya.wordpress.com/2014/08/19/adding-a-hello-world-system-call-to-linux-kernel-3-16-0/
+
+https://brennan.io/2016/11/14/kernel-dev-ep3/
+
+https://stackoverflow.com/questions/23324938/how-to-use-my-custom-system-call-with-its-name-and-not-with-its-number
