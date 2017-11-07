@@ -1,0 +1,376 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset178 GeezaPro;\f2\fnil\fcharset0 LucidaGrande;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 marshalling or marshaling is the process of transforming the memory representation of an object to a data format suitable for storage or transmission, and it is typically used when data must be moved between different parts of a computer program or from one program to another\
+\
+Converting an object in memory into a format that can be written to disk, or sent over the wire, etc.\
+\
+
+\f1 \'ca\'da\'d1\uc0\u1740 \'dd
+\f0  
+\f1 \'e3\'c7\'d1\'d4\'c7\'e1
+\f0 \
+\
+Marshalling is used within implementations of different remote procedure call (RPC) mechanisms, where it is necessary to transport data between processes and/or between threads\
+\
+\
+In computer science, in the context of data storage, serialization is the process of translating data structures or object state into a format that can be stored (for example, in a file or memory buffer) or transmitted (for example, across a network connection link) and reconstructed later (possibly in a different computer environment).[1] When the resulting series of bits is reread according to the serialization format, it can be used to create a semantically identical clone of the original object\
+\
+To "serialize" an object means to convert its state into a byte stream in such a way that the byte stream can be converted back into a copy of the object.\
+\
+
+\f1 \'ca\'da\'d1\uc0\u1740 \'dd
+\f0  
+\f1 \'d3\'d1\uc0\u1740 \'c7\'e1\'c7\u1740 \'d2\
+\
+\
+\
+
+\f2 Marshaling
+\f1  
+\f2 and
+\f1  
+\f2 serialization
+\f1  
+\f2 are
+\f1  
+\f2 loosely
+\f1  
+\f2 synonymous
+\f1  
+\f2 in
+\f1  
+\f2 the
+\f1  
+\f2 context
+\f1  
+\f2 of
+\f1  
+\f2 remote
+\f1  
+\f2 procedure
+\f1  
+\f2 call,
+\f1  
+\f2 but
+\f1  
+\f2 semantically
+\f1  
+\f2 different
+\f1  
+\f2 as
+\f1  
+\f2 a
+\f1  
+\f2 matter
+\f1  
+\f2 of
+\f1  
+\f2 intent
+\f1 .\
+\
+
+\f2 In
+\f1  
+\f2 particular,
+\f1  
+\f2 marshaling
+\f1  
+\f2 is
+\f1  
+\f2 about
+\f1  
+\f2 getting
+\f1  
+\f2 parameters
+\f1  
+\f2 from
+\f1  
+\f2 here
+\f1  
+\f2 to
+\f1  
+\f2 there,
+\f1  
+\f2 while
+\f1  
+\f2 serialization
+\f1  
+\f2 is
+\f1  
+\f2 about
+\f1  
+\f2 copying
+\f1  
+\f2 structured
+\f1  
+\f2 data
+\f1  
+\f2 to
+\f1  
+\f2 or
+\f1  
+\f2 from
+\f1  
+\f2 a
+\f1  
+\f2 primitive
+\f1  
+\f2 form
+\f1  
+\f2 such
+\f1  
+\f2 as
+\f1  
+\f2 a
+\f1  
+\f2 byte
+\f1  
+\f2 stream
+\f1 . 
+\f2 In
+\f1  
+\f2 this
+\f1  
+\f2 sense,
+\f1  
+\f2 serialization
+\f1  
+\f2 is
+\f1  
+\f2 one
+\f1  
+\f2 means
+\f1  
+\f2 to
+\f1  
+\f2 perform
+\f1  
+\f2 marshaling,
+\f1  
+\f2 usually
+\f1  
+\f2 implementing
+\f1  
+\f2 pass-by-value
+\f1  
+\f2 semantics
+\f1 .\
+\
+
+\f2 It
+\f1  
+\f2 is
+\f1  
+\f2 also
+\f1  
+\f2 possible
+\f1  
+\f2 for
+\f1  
+\f2 an
+\f1  
+\f2 object
+\f1  
+\f2 to
+\f1  
+\f2 be
+\f1  
+\f2 marshaled
+\f1  
+\f2 by
+\f1  
+\f2 reference,
+\f1  
+\f2 in
+\f1  
+\f2 which
+\f1  
+\f2 case
+\f1  
+\f2 the
+\f1  
+\f2 data
+\f1  
+\f2 "on
+\f1  
+\f2 the
+\f1  
+\f2 wire"
+\f1  
+\f2 is
+\f1  
+\f2 simply
+\f1  
+\f2 location
+\f1  
+\f2 information
+\f1  
+\f2 for
+\f1  
+\f2 the
+\f1  
+\f2 original
+\f1  
+\f2 object
+\f1 . 
+\f2 However,
+\f1  
+\f2 such
+\f1  
+\f2 an
+\f1  
+\f2 object
+\f1  
+\f2 may
+\f1  
+\f2 still
+\f1  
+\f2 be
+\f1  
+\f2 amenable
+\f1  
+\f2 to
+\f1  
+\f2 value
+\f1  
+\f2 serialization
+\f1 .\
+\
+
+\f2 As
+\f1  
+\f2 @Bill
+\f1  
+\f2 mentions,
+\f1  
+\f2 there
+\f1  
+\f2 may
+\f1  
+\f2 be
+\f1  
+\f2 additional
+\f1  
+\f2 metadata
+\f1  
+\f2 such
+\f1  
+\f2 as
+\f1  
+\f2 code
+\f1  
+\f2 base
+\f1  
+\f2 location
+\f1  
+\f2 or
+\f1  
+\f2 even
+\f1  
+\f2 object
+\f1  
+\f2 implementation
+\f1  
+\f2 code
+\f1 .\
+\
+. 
+\f2 Marshalling
+\f1  
+\f2 is
+\f1  
+\f2 like
+\f1  
+\f2 serialization,
+\f1  
+\f2 except
+\f1  
+\f2 marshalling
+\f1  
+\f2 also
+\f1  
+\f2 records
+\f1  
+\f2 codebases
+\f1 . 
+\f2 Marshalling
+\f1  
+\f2 is
+\f1  
+\f2 different
+\f1  
+\f2 from
+\f1  
+\f2 serialization
+\f1  
+\f2 in
+\f1  
+\f2 that
+\f1  
+\f2 marshalling
+\f1  
+\f2 treats
+\f1  
+\f2 remote
+\f1  
+\f2 objects
+\f1  
+\f2 specially
+\f1 .\
+\'ca\'dd\'c7\'e6\'ca \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+\cf0 \'c8\'d1\'c7\uc0\u1740  \'c7\'d1\'d3\'c7\'e1 \'81\'c7\'d1\'c7\'e3\'ca\'d1 \'e5\'c7 \u1740  \'ca\'c7\'c8\'da\'c7 \'e6 \'c7\u1740 \'e4\'c7  \'c8\u1740 \'e4 \u1705 \'e1\'c7\u1740 \'e4\'ca \'d3\'d1\'e6\'d1 \'e3\'cb\'e1\'c7\
+\'e3\'c7\'d1\'d4\'c7\'e1 \'e3\uc0\u1740 \'d4\'e5\
+\'ca\'c8\'cf\uc0\u1740 \'e1 \u1740 \'e5 \'c2\'c8\'cc\u1705 \'ca \'cf\'d1 \'e3\'e3\'e6\'d1\u1740  \'c8\'e5 \u1740 \'e5 \'dd\'d1\'e3\'ca\u1740  \u1705 \'e5 \'de\'c7\'c8\'e1 \'d0\'ce\u1740 \'d1\'e5 \'d3\'c7\'d2\u1740  \'d1\'e6 \'cf\u1740 \'d3\u1705  \'c8\'c7\'d4\'e5 \u1740 \'c7 \'c7\'e4\'ca\'de\'c7\'e1 \'c7\'d2 \'d8\'d1\u1740 \'de \'d3\u1740 \'e3 \'e6 ... \'e3\u1740 \'d4\'e5 \'e3\'c7\'d1\'d4\'c7\'e1\
+\'c2\'c8\'cc\uc0\u1705 \'ca \'e5\'c7 \'ca\'c8\'cf\u1740 \'e1 \'c8\'e5 \'c8\'c7\u1740 \'ca \'c7\'d3\'ca\'d1\u1740 \'e3 \'e3\u1740 \'d4\'e5 \u1705 \'e5 \'c8\'e5 \'c7\'e6\'e4 \'e3\u1740 \'90\'e4 \'d3\'d1\u1740 \'c7\'e1\'c7\u1740 \'d2\
+\'e6\'c7\'d3\'e5 \'d3\'d1\uc0\u1740 \'c7\'e1\'c7\u1740 \'d2 \u1740 \'e5 \'cc\'c7 \'90\'dd\'ca\'e5 \'c8\'e6\'cf \'e3\'cb\'e1\'c7 \'c7\u1740 \'e4\u1705 \'e5 
+\f2 3
+\f1  \uc0\u1740 \'e5 \'ca\u1740 \u1705 \'e5 \'c7\'d2 \u1740 \'e5 \'c7\'c8\'cc\u1705 \'ca \'c8\'c7\'d4\'e5 \'e1\'d2\'e6\'e3\'c7 \'e3\'d4\'ce\'d5 \'e4\'e3\u1740 \u1705 \'e4\'e5 \u1705 \'e5 \'c7\'d3\'ca\'d1\u1740 \'e4\'90\'e5 \u1740 \'c7 \'c7\u1740 \'e4\'ca \'e6 ... \u1705 \'e5 \'c7\u1740 \'e4 \'c7\u1740 \'e4\'ca \'c8\'e6\'cf\'e4\'d4 \'e5\'e3 \u1740 \'cc\'e6\'d1\u1740  \u1705 \'e4\'c7\'d1\'d4 \'e3\u1740 \'c7\'cf\
+\'d3\'d1\uc0\u1740 \'c7\'e1
+\f2 \uc0\u8204 
+\f1 \'d3\'c7\'d2\uc0\u1740  \'e3\'d1\'cd\'e1\'e5 \'ca\'d1\'cc\'e3\'e5 \'cf\'c7\'cf\'e5
+\f2 \uc0\u8204 
+\f1  \'d3\'c7\'ce\'ca\'c7\'d1\'e5\'c7 \uc0\u1740 \'c7 \'c7\'d4\u1740 \'c7 \'c8\'e5 \'de\'c7\'e1\'c8\u1740  \'c7\'d3\'ca \u1705 \'e5 \'de\'c7\'c8\'e1 \'d0\'ce\u1740 \'d1\'e5 \u1705 \'d1\'cf\'e4 \'c8\'c7\'d4\'cf \'e6 \'e3\'cc\'cf\'cf\'c7\'f0 \'c8\'ca\'e6\'c7\'e4\'cf \'cf\'d1 \'e5\'e3\'c7\'e4 \'e3\'cd\u1740 \'d8 \u1740 \'c7 \'e3\'cd\u1740 \'d8 \u1705 \'c7\'e3\'81\u1740 \'e6\'ca\'d1 \'cf\u1740 \'90\'d1 \'c8\'c7\'d2\'d3\'c7\'d2\u1740  \'d4\'e6\'cf.
+\f2 [
+\f1 \uc0\u1779 
+\f2 ]
+\f1  \uc0\u1740 \u1705  \'d4\'c6 \'d3\'d1\u1740 \'c7\'e1
+\f2 \uc0\u8204 
+\f1 \'d3\'c7\'d2\uc0\u1740  \'d4\'cf\'e5\'a1 \'d4\'c6 \'c7\u1740  \'c7\'d3\'ca \u1705 \'e5 \'c8\'e5 \'d5\'e6\'d1\'ca \'cf\'e4\'c8\'c7\'e1\'e5
+\f2 \uc0\u8204 
+\f1 \'c7\uc0\u1740  \'c7\'d2 \'c8\'c7\u1740 \'ca
+\f2 \uc0\u8204 
+\f1 \'e5\'c7 \'e4\'e3\'c7\uc0\u1740 \'d4 \'cf\'c7\'cf\'e5 \'e3\u1740 
+\f2 \uc0\u8204 
+\f1 \'d4\'e6\'cf \uc0\u1705 \'e5 \'d4\'c7\'e3\'e1 \'cf\'c7\'cf\'e5 \'c2\'e4 \'d4\'c6 \'e6 \'c7\'d8\'e1\'c7\'da\'c7\'ca \'e3\'d1\'ca\'c8\'d8 \'c8\'c7 \'e4\'e6\'da \'d4\'c6 \'e6 \'c7\'e4\'e6\'c7\'da \'cf\'c7\'cf\'e5
+\f2 \uc0\u8204 
+\f1 \'e5\'c7\uc0\u1740  \'d0\'ce\u1740 \'d1\'e5
+\f2 \uc0\u8204 
+\f1 \'d4\'cf\'e5 \'cf\'d1 \'d4\'c6 \'c7\'d3\'ca.\
+\'ce\uc0\u1740 \'e1\u1740 \u1740  \'e5\'e3 \'d4\'c8\u1740 \'e5 \'e5\'e3\'e4 \
+\uc0\u1705 \'e5 \'ca\'dd\'c7\'e6\'ca\'d4\'e6\'e4 \'d1\'e6 \'ca\'e6\'c2\'ce\'d1\u1740  \'90\'dd\'ca\'e5 \'e6\'e1\u1740  \'e3\'e4 \'ce\'e6\'c8 \'e4\'e3\u1740 \'dd\'e5\'e3\'e3\
+\uc0\u1740 \u1705 \u1740  \'c7\'d2 \'ca\'dd\'c7\'e6\'ca\'c7\'d4 \'c8\'e6\'cf\'e4 \u1705 \'cf \'c8\u1740 \'d3
+\f2 (
+\f1 \'dd\uc0\u1705  \u1705 \'e4\'e3 \u1740 \'e5 \'ca\u1740 \u1705 \'e5 \u1740  \'d3\'e6\'d1\'d3 \u1705 \'cf
+\f2 )
+\f1  \'cf\'d1 \'e3\'c7\'d1\'d4\'c7\'e1\
+\uc0\u1705 \'c7\'d1\'c8\'d1\'cf \'e3\'c7\'d1\'d4\'c7\'e1 
+\f2 :
+\f1  \'cf\'d1 \'81\uc0\u1740 \'c7\'cf\'e5 \'d3\'c7\'d2\u1740  \'e3\u1705 \'c7\'e4\u1740 \'d2\'e3 \'e5\'c7\u1740  
+\f2 RPC
+\f1  \'e6 \'e3\'e6\'de\'da\uc0\u1740  \'e5\'d3\'ca \u1705 \'e5 \'c8\u1740 \'e4 \'ca\'d1\'cf \'e5\'c7 \'e3\'cb\'e1\'c7 \'c8\'c7\u1740 \'cf \'c7\'e4\'ca\'de\'c7\'e1 \'cf\'c7\'cf\'e5 \'c7\'e4\'cc\'c7\'e3 \'c8\'90\u1740 \'d1\'e5\
+\
+\
+\'ce\'e1\'c7\'d5\'e5 \'c8\'c7\'e1\'c7\uc0\u1740 \u1740  \'e5\'c7 \'c7\u1740 \'e4\'e5 \u1705 \'e5 \'c7\'e1\'c8\'ca\'e5 \'d2\u1740 \'c7\'cf \'e3\'d8\'e3\'c6\'e4 \'e4\u1740 \'d3\'ca\'e3\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+}
