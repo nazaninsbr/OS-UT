@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid1\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+amount of time required to create the thread, together with the fact that the thread will be discarded once it has completed its work. The second issue is more troublesome. If we allow all concurrent requests to be serviced in a new thread, we have not placed a bound on the number of threads concurrently active in the system. Unlimited threads could exhaust system resources, such as 
+\fs24 CPU 
+\fs26\fsmilli13333 time or memory. One solution to this problem is to use a 
+\b \cf3 thread pool
+\b0 \cf2 . 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 The general idea behind a thread pool is to create a number of threads at process startup and place them into a pool, where they sit and wait for work. When a server receives a request, it awakens a thread from this pool\'97if one is available\'97and passes it the request for service. Once the thread completes its service, it returns to the pool and awaits more work. If the pool contains no available thread, the server waits until one becomes free. 
+\f1\fs24 \cf4 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa240\partightenfactor0
+\ls1\ilvl0
+\f0\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+The number of threads in the pool can be set heuristically based on factors 
+\f1\fs24 \cf4 \uc0\u8232 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 such as the number of 
+\fs24 CPU
+\fs26\fsmilli13333 s in the system, the amount of physical memory, and the expected number of concurrent client requests. More sophisticated thread-pool architectures can dynamically adjust the number of threads in the pool according to usage patterns. Such architectures provide the further benefit of having a smaller pool\'97thereby consuming less memory\'97when the load on the system is low. 
+\f1\fs24 \cf4 \
+\
+\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f2\fs26\fsmilli13333 \cf2  #pragma omp parallel\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf2 it creates as many threads are there are processing cores in the system. Thus, for a dual-core system, two threads are created, for a quad-core system, four are created; and so forth. All the threads then simultaneously execute the parallel region. As each thread exits the parallel region, it is terminated. 
+\f1\fs24 \cf4 \
+\
+\
+\
+\
+
+\f0\fs26\fsmilli13333 \cf2 A block is simply a self-contained unit of work. It is specified by a caret \'88 inserted in front of a pair of braces 
+\f1 \cf2 \{ \} 
+\fs24 \cf4 \
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+
+\f0 \cf2 GCD 
+\fs26\fsmilli13333 schedules blocks for run-time execution by placing them on a 
+\b \cf3 dispatch queue
+\b0 \cf2 . When it removes a block from a queue, it assigns the block to an available thread from the thread pool it manages. 
+\fs24 GCD 
+\fs26\fsmilli13333 identifies two types of dispatch queues: 
+\i\b serial 
+\i0\b0 and 
+\i\b concurrent
+\i0\b0 . 
+\f1\fs24 \cf4 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 Blocks placed on a serial queue are removed in 
+\fs24 FIFO 
+\fs26\fsmilli13333 order. Once a block has been removed from the queue, it must complete execution before another block is removed. Each process has its own serial queue (known as its 
+\b \cf3 main queue
+\b0 \cf2 ). Developers can create additional serial queues that are local to particular processes. Serial queues are useful for ensuring the sequential execution of several tasks. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Blocks placed on a concurrent queue are also removed in 
+\fs24 FIFO 
+\fs26\fsmilli13333 order, but several blocks may be removed at a time, thus allowing multiple blocks to execute in parallel. 
+\f1\fs24 \cf4 \
+}

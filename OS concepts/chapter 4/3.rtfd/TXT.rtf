@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red0\green0\blue0;\red19\green156\blue235;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c0\c0;\cssrgb\c0\c67843\c93725;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+In general, five areas present challenges in programming for multicore systems: 
+\f1\fs24 \cf3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 {{\NeXTGraphic page191image22704.png \width40 \height20
+}¬}\pard\pardeftab720\sl280\partightenfactor0
+\cf3  \cf3 {{\NeXTGraphic page191image22872.png \width260 \height28
+}¬}\cf3  \cf3 {{\NeXTGraphic page191image23040.png \width155 \height22
+}¬}\cf3  \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs26\fsmilli13333 \cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Identifying tasks. This involves examining applications to find areas that can be divided into separate, concurrent tasks. Ideally, tasks are independent of one another and thus can run in parallel on individual cores. \cf4 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa266\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Balance. While identifying tasks that can run in parallel, programmers must also ensure that the tasks perform equal work of equal value. In some instances, a certain task may not contribute as much value to the overall process as other tasks. Using a separate execution core to run that task may not be worth the cost. \cf4 \uc0\u8232 \
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Data splitting. Just as applications are divided into separate tasks, the data accessed and manipulated by the tasks must be divided to run on separate cores. \cf4 \uc0\u8232 \
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+Data dependency. The data accessed by the tasks must be examined for dependencies between two or more tasks. When one task depends on data from another, programmers must ensure that the execution of the tasks is synchronized to accommodate the data dependency. We examine such strategies in Chapter 5. \cf4 \uc0\u8232 \
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+Testing and debugging. When a program is running in parallel on multiple cores, many different execution paths are possible. Testing and debugging such concurrent programs is inherently more difficult than testing and debugging single-threaded applications. \cf4 \uc0\u8232 \
+}
