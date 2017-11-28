@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Palatino-Roman;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red26\green23\blue24;\red19\green156\blue235;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c13725\c12157\c12549;\cssrgb\c0\c67843\c93725;\cssrgb\c0\c0\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf2 \expnd0\expndtw0\kerning0
+The implementation of a semaphore with a waiting queue may result in a situation where two or more processes are waiting indefinitely for an event that can be caused only by one of the waiting processes. The event in question is the execution of a 
+\f1\fs29\fsmilli14667 signal() 
+\f0\fs26\fsmilli13333 operation. When such a state is reached, these processes are said to be 
+\b \cf3 deadlocked
+\b0 \cf2 . 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 We say that a set of processes is in a deadlocked state when every process in the set is waiting for an event that can be caused only by another process in the set. The events with which we are mainly concerned here are resource acquisition and release. Other types of events may result in deadlocks, as we show in Chapter 7. In that chapter, we describe various mechanisms for dealing with the deadlock problem. 
+\f1\fs24 \cf4 \
+
+\f0\fs26\fsmilli13333 \cf2 Another problem related to deadlocks is 
+\b \cf3 indefinite blocking 
+\b0 \cf2 or 
+\b \cf3 starvation
+\b0 \cf2 , a situation in which processes wait indefinitely within the semaphore. Indefinite blocking may occur if we remove processes from the list associated with a semaphore in 
+\fs24 \cf2 LIFO 
+\fs26\fsmilli13333 \cf2 (last-in, first-out) order. 
+\f1\fs24 \cf4 \
+}
