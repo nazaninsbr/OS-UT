@@ -62,8 +62,8 @@ int main()
  
 
  	int n = 5, result;
- 	// result = mysem_init(mysem, n);
-    result = syscall(MYSEM_INIT, mysem, n);
+ 	result = mysem_init(mysem, n);
+    //result = syscall(MYSEM_INIT, mysem, n);
 
     pid_t  par_pid, chi_pid;
     int i;
@@ -92,15 +92,15 @@ int main()
 
     printf("pid: %d\tprio: %d\n", getpid(), get_priority());
 
-    //result = mysem_down(mysem);
-    result = syscall(MYSEM_DOWN, mysem);
+    result = mysem_down(mysem);
+    //result = syscall(MYSEM_DOWN, mysem);
     
     printf("I GET THE LOCK! pid: %d\tprio: %d\n", getpid(), get_priority());
 
     sleep(1);
 
-    //result = mysem_up(mysem);
-    result = syscall(MYSEM_UP, mysem);
+    result = mysem_up(mysem);
+    //result = syscall(MYSEM_UP, mysem);
 
     printf("I LOOSE THE LOCK! pid %d\tprio: %d\n", getpid(), get_priority());
           
